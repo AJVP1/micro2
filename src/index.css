@@ -1,2 +1,33 @@
+@import "tailwindcss";
 
+/* Estilo del body */
+body {
+  font-family: "Latin Modern Roman", "Computer Modern", Georgia,
+    "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #2d2d2d;
+  background-color: #fafafa;
+}
 
+/* Bloques preformateados (ejemplo YAML) */
+pre {
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 0.9em;
+  background-color: #ebebeb;
+  color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 7px;
+  border: 1px solid #d0d0c8;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  display: block;
+  white-space: pre;
+}

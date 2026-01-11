@@ -1,9 +1,7 @@
-import "./App.css";
-
 function App() {
   return (
     <>
-      <h1>Hola</h1>
+      <h1 className="after:content-['*']  after:text-red-500">Hola</h1>
     </>
   );
 }
