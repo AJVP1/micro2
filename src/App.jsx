@@ -1,7 +1,16 @@
+import Header from "./components/Header";
+import Bienvenida from "./pages/Bienvenida";
+
 function App() {
   return (
     <>
-      <h1 className="after:content-['*']  after:text-red-500">Hola</h1>
+      {/* header */}
+      <Header />
+
+      {/* main */}
+      <main>
+        <Bienvenida />
+      </main>
     </>
   );
 }
