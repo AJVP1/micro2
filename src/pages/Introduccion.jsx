@@ -3,9 +3,9 @@ import modulos from "../data/modulos.json";
 const Introduccion = () => {
   return (
     <section className="bg-[#fafafa] max-w-237 mx-auto p-6">
-      <h1 className="text-4xl font-bold text-center text-[#1d2554] mt-6">
+      <h2 className="text-4xl font-bold text-center text-[#1d2554] mt-6">
         Introducción a la materia
-      </h1>
+      </h2>
       <h2 className="mt-6 text-[#1d2554] font-semibold">
         Material obligatorio:
       </h2>
