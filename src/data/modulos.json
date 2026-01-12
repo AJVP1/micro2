@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "titulo": "Introducción",
+    "descripcion": "Problemas a tratar durante la materia. Programa de la materia. Material obligatorio.",
+    "link": "/introduccion"
+  },
+  {
+    "id": 2,
+    "titulo": "Juegos estaticos con informacion completa",
+    "descripcion": "Elementos. Dilema del prisionero. Equilibrio de Nash. Estrategia estrictamente dominada. Definición de racionalidad. Estrategias mixtas.",
+    "link": "/juegos-staticos-informacion-completa"
+  },
+  {
+    "id": 3,
+    "titulo": "Decisiones bajo incertidumbre",
+    "descripcion": "Aversión al riesgo. Utilidad esperada. Monto equivalente cierto. Coeficiente Arrow-Pratt. Compra de un seguro.",
+    "link": "/decisiones-incertidumbre"
+  },
+  {
+    "id": 4,
+    "titulo": "Juegos dinámicos con información completa",
+    "descripcion": "Estrategia en juegos dinámicos. Conjunto informativo. Subjuego. Equilibrio de Nash en subjuegos. Juegos repetidos. Estrategias gatillo",
+    "link": "/juegos-dinamicos-informacion-completa"
+  },
+  {
+    "id": 5,
+    "titulo": "Externalidades",
+    "descripcion": "Definición. Ejemplo de la Piscifactoría. Producción de Planificador. Impuesto pigouviano. Derechos de propiedad. Teorema de Coase.",
+    "link": "/externalidades"
+  },
+  {
+    "id": 6,
+    "titulo": "Bienes públicos",
+    "descripcion": "Definición. Ejemplo del faro. Problema del polizón. Solución de Samuelson. Mecanismo de Vickrey-Clarke-Groves.",
+    "link": "/bienes-publicos"
+  },
+  {
+    "id": 7,
+    "titulo": "Equilibrio general y fallas de mercado",
+    "descripcion": "Definición. Caja de Edgeworth. Curva de contrato. Ley de Walras. Teoremas del bienestar. Fallas de mercado.",
+    "link": "/equilibrio-general-fallas-mercado"
+  },
+  {
+    "id": 8,
+    "titulo": "Juegos estaticos con información incompleta",
+    "descripcion": "Elementos. Equilibrio bayesiano de Nash. Cournot.  Ejemplo del subasta de primer precio.",
+    "link": "/juegos-staticos-informacion-incompleta"
+  },
+  {
+    "id": 9,
+    "titulo": "Juegos dinámicos con información incompleta",
+    "descripcion": "Estrategia. Creencias. Regla de Bayes. Equilibrio Bayesiano Perfecto de Nash. Monopolista discriminador.",
+    "link": "/juegos-dinamicos-informacion-incompleta"
+  },
+  {
+    "id": 10,
+    "titulo": "Selección adversa",
+    "descripcion": "Definición. Ejemplo del mercado de autos usados. Ejemplo del seguro de salud. Mecanismos para combatir la selección adversa. Modelo de Akerlof.",
+    "link": "/seleccion-adversa"
+  },
+  {
+    "id": 11,
+    "titulo": "Riesgo moral",
+    "descripcion": "Definición. Mercado de crédito. Mecanismos para combatir el riesgo moral. Contrato óptimo.",
+    "link": "/riesgo-moral"
+  }
+]
