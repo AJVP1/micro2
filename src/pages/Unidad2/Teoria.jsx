@@ -1,7 +1,5 @@
 // importamos Link para navegacion interna
-import { Link } from "react-router-dom";
-// importamos los ejercicios de la unidad 2
-import ejercicios from "../data/ejercicios2.json";
+import { Link, Outlet } from "react-router-dom";
 
 const Unidad2 = () => {
   return (
@@ -16,23 +14,22 @@ const Unidad2 = () => {
       <h2 className="text-2xl font-semibold text-[#1d2554] mt-6">Practica</h2>
       <hr />
       <ul className="flex gap-2">
-        {ejercicios.map((ejercicio) => (
-          <EjercicioLink key={ejercicio.id} ejercicio={ejercicio} />
-        ))}
+        <Link
+          to={`/juegos-estaticos-informacion-completa/ejercicio-1`}
+          className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+        >
+          Ejercicio 1
+        </Link>
+        <Link
+          to={`/juegos-estaticos-informacion-completa/ejercicio-2`}
+          className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+        >
+          Ejercicio 2
+        </Link>
       </ul>
+      <Outlet />
     </section>
   );
 };
-
-function EjercicioLink({ ejercicio }) {
-  return (
-    <Link
-      to={`/juegos-estaticos-informacion-completa/${ejercicio.slug}`}
-      className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
-    >
-      {ejercicio.titulo}
-    </Link>
-  );
-}
 
 export default Unidad2;

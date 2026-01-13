@@ -3,12 +3,12 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 
 // importar componentes
 import Header from "./components/Header";
-import Ejercicio from "./components/Ejercicio";
+import Router2 from "./components/Router2";
 
 // importar paginas
 import Bienvenida from "./pages/Bienvenida";
 import Introduccion from "./pages/Introduccion";
-import Unidad2 from "./pages/Unidad2";
+import Unidad2 from "./pages/Unidad2/Teoria";
 
 function App() {
   return (
@@ -23,11 +23,9 @@ function App() {
           <Route
             path="/juegos-estaticos-informacion-completa"
             element={<Unidad2 />}
-          />
-          <Route
-            path="/juegos-estaticos-informacion-completa/:slug"
-            element={<Ejercicio />}
-          />
+          >
+            <Route path=":slug" element={<Router2 />} />
+          </Route>
 
           <Route />
           <Route path="*" element={<p>Página no encontrada</p>} />
