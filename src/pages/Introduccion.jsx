@@ -36,9 +36,9 @@ const Introduccion = () => {
         ))}
       </ul>
       <p className="mt-3">
-        Del 1-3 se trata de juegos de un solo momento e información completa;
-        del 4-6 se trata de juegos de varios momentos e información completa; el
-        7 es juegos de un solo momento e información incompleta; del 8-10 son
+        Del 2-4 se trata de juegos de un solo momento e información completa;
+        del 5-7 se trata de juegos de varios momentos e información completa; el
+        8 es juegos de un solo momento e información incompleta; del 9-11 son
         juegos de varios momentos e información incompleta.
       </p>
     </section>

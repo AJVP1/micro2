@@ -10,26 +10,47 @@ import Bienvenida from "./pages/Bienvenida";
 import Introduccion from "./pages/Introduccion";
 import Unidad2 from "./pages/Unidad2/Teoria";
 
+// importar auth
+import { AuthProvider, AuthRoute } from "./auth/auth";
+import LoginPage from "./auth/LoginPage";
+import LogoutPage from "./auth/LogoutPage";
+
 function App() {
   return (
     <>
       <HashRouter>
-        <Header />
+        <AuthProvider>
+          <Header />
 
-        <Routes>
-          <Route path="/" element={<Bienvenida />} />
-          <Route path="/introduccion" element={<Introduccion />} />
+          <Routes>
+            <Route path="/" element={<Bienvenida />} />
+            <Route path="/introduccion" element={<Introduccion />} />
 
-          <Route
-            path="/juegos-estaticos-informacion-completa"
-            element={<Unidad2 />}
-          >
-            <Route path=":slug" element={<Router2 />} />
-          </Route>
+            <Route
+              path="/juegos-estaticos-informacion-completa"
+              element={
+                <AuthRoute>
+                  <Unidad2 />
+                </AuthRoute>
+              }
+            >
+              <Route path=":slug" element={<Router2 />} />
+            </Route>
 
-          <Route />
-          <Route path="*" element={<p>Página no encontrada</p>} />
-        </Routes>
+            <Route />
+
+            <Route path="/login" element={<LoginPage />} />
+            <Route
+              path="/logout"
+              element={
+                <AuthRoute>
+                  <LogoutPage />
+                </AuthRoute>
+              }
+            />
+            <Route path="*" element={<p>Página no encontrada</p>} />
+          </Routes>
+        </AuthProvider>
       </HashRouter>
     </>
   );
