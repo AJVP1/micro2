@@ -1,5 +1,6 @@
 // importar librerias
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { MathJaxContext } from "better-react-mathjax";
 
 // importar componentes
 import Header from "./components/Header";
@@ -17,7 +18,7 @@ import LogoutPage from "./auth/LogoutPage";
 
 function App() {
   return (
-    <>
+    <MathJaxContext config={{ tex: { inlineMath: [["$", "$"]] } }}>
       <HashRouter>
         <AuthProvider>
           <Header />
@@ -52,7 +53,7 @@ function App() {
           </Routes>
         </AuthProvider>
       </HashRouter>
-    </>
+    </MathJaxContext>
   );
 }
 
