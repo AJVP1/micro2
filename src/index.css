@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Design Tokens */
+:root {
+  --color-primary: #1d2554;
+  --color-primary-hover: #374785;
+  --color-surface: #fafafa;
+  --color-text: #2d2d2d;
+  --color-accent: #C5A059;
+  --color-border: black;
+  --spacing-table: 1.75rem;
+}
+
 /* Resetear html para que el height funcione */
 html {
   height: 100%;

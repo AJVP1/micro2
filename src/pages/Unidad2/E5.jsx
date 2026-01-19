@@ -1,184 +1,75 @@
-import { MathJax } from "better-react-mathjax";
+import ExerciseLayout from "../../components/layout/ExerciseLayout";
+import GameTable from "../../components/ui/GameTable";
 
 function Ejercicio5() {
   return (
-    <MathJax>
-      <section className="bg-[#fafafa] mx-auto p-6">
-        <h2 className="text-4xl text-center text-[#1d2554] mt-6">
-          Ejercicio 5
-        </h2>
-        <h3 className="text-2xl font-semibold mt-4">Enunciado</h3>
-        <p className="mt-2">
-          Considere un juego del tipo "dilema del prisionero" con los siguientes
-          pagos:
-        </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">A</th>
-            <th className="border border-black p-3">B</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">A</th>
-            <td className="border border-black p-3">($1;1$)</td>
-            <td className="border border-black p-3">($10;0$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">B</th>
-            <td className="border border-black p-3">($0;10$)</td>
-            <td className="border border-black p-3">($5;5$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
-        <ol className="list-decimal list-inside mt-2">
-          <li>
-            Encuentre todos los perfiles formados por estrategias puras que
-            sobreviven al proceso de eliminación de estrategias estrictamente
-            dominadas.
-          </li>
-          <li>
-            Encuentre el único equilibrio de Nash. ¿Es óptimo en el sentido de
-            Pareto?
-          </li>
-        </ol>
-        <h3 className="text-2xl font-semibold mt-4">Solución</h3>
-        <p className="mt-2">Para el punto 1.</p>
-        <p>
-          Podemos eliminar la estrategia $B$ para el jugador 1 ya que esta es
-          estrictamente dominada por la estrategia $A$. Quedando el juego:
-        </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="2">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">A</th>
-            <th className="border border-black p-3">B</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">A</th>
-            <td className="border border-black p-3">($1;1$)</td>
-            <td className="border border-black p-3">($10;0$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
-        <p className="mt-2">
-          Ahora podemos eliminar la estrategia $B$ para el jugador 2 ya que esta
-          es estrictamente dominada por la estrategia $A$. Quedando el juego:
-        </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="2">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="2">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">A</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">A</th>
-            <td className="border border-black p-3">($1;1$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
-        <p className="mt-2">El perfil que sobrevive es ($A, A$).</p>
-        <p className="mt-2">Para el punto 2.</p>
-        <p className="mt-2">
-          Seleccionando las mejores repuestas para ambos jugadores:
-        </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">A</th>
-            <th className="border border-black p-3">B</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">A</th>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1};\\textcolor{red}{1}$)"}
-            </td>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{10};0$)"}
-            </td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">B</th>
-            <td className="border border-black p-3">
-              {"($0;\\textcolor{red}{10}$)"}
-            </td>
-            <td className="border border-black p-3">($5;5$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
-        <p className="mt-2">
-          El equilibrio de Nash es ($A; A$), y este no es optimo en el sentido
-          de Pareto dado que los jugadores podrían cooperar y estar mejor los
-          dos sin empeorar la situación del otro.
-        </p>
-      </section>
-    </MathJax>
+    <ExerciseLayout number={5}>
+      <h3 className="text-2xl font-semibold mt-4">Enunciado</h3>
+      <p className="mt-2">
+        Considere un juego del tipo "dilema del prisionero" con los siguientes
+        pagos:
+      </p>
+      <GameTable
+        player1Strategies={["A", "B"]}
+        player2Strategies={["A", "B"]}
+        payoffs={[
+          ["($1;1$)", "($10;0$)"],
+          ["($0;10$)", "($5;5$)"],
+        ]}
+      />
+      <ol className="list-decimal list-inside mt-2">
+        <li>
+          Encuentre todos los perfiles formados por estrategias puras que
+          sobreviven al proceso de eliminación de estrategias estrictamente
+          dominadas.
+        </li>
+        <li>
+          Encuentre el único equilibrio de Nash. ¿Es óptimo en el sentido de
+          Pareto?
+        </li>
+      </ol>
+      <h3 className="text-2xl font-semibold mt-4">Solución</h3>
+      <p className="mt-2">Para el punto 1.</p>
+      <p>
+        Podemos eliminar la estrategia $B$ para el jugador 1 ya que esta es
+        estrictamente dominada por la estrategia $A$. Quedando el juego:
+      </p>
+      <GameTable
+        player1Strategies={["A"]}
+        player2Strategies={["A", "B"]}
+        payoffs={[["($1;1$)", "($10;0$)"]]}
+      />
+      <p className="mt-2">
+        Ahora podemos eliminar la estrategia $B$ para el jugador 2 ya que esta
+        es estrictamente dominada por la estrategia $A$. Quedando el juego:
+      </p>
+      <GameTable
+        player1Strategies={["A"]}
+        player2Strategies={["A"]}
+        payoffs={[["($1;1$)"]]}
+      />
+      <p className="mt-2">El perfil que sobrevive es ($A, A$).</p>
+      <p className="mt-2">Para el punto 2.</p>
+      <p className="mt-2">
+        Seleccionando las mejores repuestas para ambos jugadores:
+      </p>
+      <GameTable
+        player1Strategies={["A", "B"]}
+        player2Strategies={["A", "B"]}
+        payoffs={[
+          [
+            "($\\textcolor{red}{1};\\textcolor{red}{1}$)",
+            "($\\textcolor{red}{10};0$)",
+          ],
+          ["($0;\\textcolor{red}{10}$)", "($5;5$)"],
+        ]}
+      />
+      <p className="mt-2">
+        El equilibrio de Nash es ($A; A$), y este no es optimo en el sentido
+        de Pareto dado que los jugadores podrían cooperar y estar mejor los
+        dos sin empeorar la situación del otro.
+      </p>
+    </ExerciseLayout>
   );
 }
 

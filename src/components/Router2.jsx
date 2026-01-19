@@ -1,34 +1,21 @@
+import { lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
-import Ejercicio1 from "../pages/Unidad2/E1";
-import Ejercicio2 from "../pages/Unidad2/E2";
-import Ejercicio3 from "../pages/Unidad2/E3";
-import Ejercicio4 from "../pages/Unidad2/E4";
-import Ejercicio5 from "../pages/Unidad2/E5";
-import Ejercicio6 from "../pages/Unidad2/E6";
-import Ejercicio7 from "../pages/Unidad2/E7";
-import Ejercicio8 from "../pages/Unidad2/E8";
-import Ejercicio9 from "../pages/Unidad2/E9";
-import Ejercicio10 from "../pages/Unidad2/E10";
-import Ejercicio11 from "../pages/Unidad2/E11";
-import Ejercicio12 from "../pages/Unidad2/E12";
-import Ejercicio13 from "../pages/Unidad2/E13";
-import Ejercicio14 from "../pages/Unidad2/E14";
 
 const ejerciciosMap = {
-  "ejercicio-1": Ejercicio1,
-  "ejercicio-2": Ejercicio2,
-  "ejercicio-3": Ejercicio3,
-  "ejercicio-4": Ejercicio4,
-  "ejercicio-5": Ejercicio5,
-  "ejercicio-6": Ejercicio6,
-  "ejercicio-7": Ejercicio7,
-  "ejercicio-8": Ejercicio8,
-  "ejercicio-9": Ejercicio9,
-  "ejercicio-10": Ejercicio10,
-  "ejercicio-11": Ejercicio11,
-  "ejercicio-12": Ejercicio12,
-  "ejercicio-13": Ejercicio13,
-  "ejercicio-14": Ejercicio14,
+  "ejercicio-1": lazy(() => import("../pages/Unidad2/E1")),
+  "ejercicio-2": lazy(() => import("../pages/Unidad2/E2")),
+  "ejercicio-3": lazy(() => import("../pages/Unidad2/E3")),
+  "ejercicio-4": lazy(() => import("../pages/Unidad2/E4")),
+  "ejercicio-5": lazy(() => import("../pages/Unidad2/E5")),
+  "ejercicio-6": lazy(() => import("../pages/Unidad2/E6")),
+  "ejercicio-7": lazy(() => import("../pages/Unidad2/E7")),
+  "ejercicio-8": lazy(() => import("../pages/Unidad2/E8")),
+  "ejercicio-9": lazy(() => import("../pages/Unidad2/E9")),
+  "ejercicio-10": lazy(() => import("../pages/Unidad2/E10")),
+  "ejercicio-11": lazy(() => import("../pages/Unidad2/E11")),
+  "ejercicio-12": lazy(() => import("../pages/Unidad2/E12")),
+  "ejercicio-13": lazy(() => import("../pages/Unidad2/E13")),
+  "ejercicio-14": lazy(() => import("../pages/Unidad2/E14")),
 };
 
 function Router2() {
@@ -46,7 +33,15 @@ function Router2() {
     );
   }
 
-  return <EjercicioComponent />;
+  return (
+    <Suspense
+      fallback={
+        <div className="text-center p-6 text-[#1d2554]">Cargando...</div>
+      }
+    >
+      <EjercicioComponent />
+    </Suspense>
+  );
 }
 
 export default Router2;
