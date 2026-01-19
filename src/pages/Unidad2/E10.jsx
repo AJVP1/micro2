@@ -26,75 +26,85 @@ function Ejercicio10() {
           otro atrapa el conejo. La matriz de pagos es:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Liebre</th>
-            <th class="border border-black p-3">Conejo</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Liebre</th>
+            <th className="border border-black p-3">Conejo</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">Liebre</th>
-            <td class="border border-black p-3">($2;2$)</td>
-            <td class="border border-black p-3">($1;0$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">Conejo</th>
-            <td class="border border-black p-3">($0;1$)</td>
-            <td class="border border-black p-3">($1;1$)</td>
+            <th className="border border-black p-3">Liebre</th>
+            <td className="border border-black p-3">($2;2$)</td>
+            <td className="border border-black p-3">($1;0$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">Conejo</th>
+            <td className="border border-black p-3">($0;1$)</td>
+            <td className="border border-black p-3">($1;1$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
         <p>Representando las mejores respuestas en la matriz de pagos.</p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Liebre</th>
-            <th class="border border-black p-3">Conejo</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Liebre</th>
+            <th className="border border-black p-3">Conejo</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">Liebre</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">Liebre</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{2};\\textcolor{red}{2}$)"}
             </td>
-            <td class="border border-black p-3">
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1};0$)"}
             </td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">Conejo</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">Conejo</th>
+            <td className="border border-black p-3">
               {"($0;\\textcolor{red}{1}$)"}
             </td>
-            <td class="border border-black p-3">
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1};\\textcolor{red}{1}$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p>
           Los equilibrios de Nash son ($Liebre, Liebre$) y ($Conejo, Conejo$).

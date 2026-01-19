@@ -24,14 +24,14 @@ function Ejercicio3() {
           matricial quedaría:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
+          <thead><tr>
             <th className="border border-black p-3"></th>
             <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
+          </thead>
+          <tbody><tr>
             <th className="border border-black p-3" rowSpan="3">
               <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
@@ -42,17 +42,22 @@ function Ejercicio3() {
             <th className="border border-black p-3">No Acertó</th>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">Cara</th>
             <td className="border border-black p-3">($1;-1$)</td>
             <td className="border border-black p-3">($0;0$)</td>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">Ceca</th>
             <td className="border border-black p-3">($1;-1$)</td>
             <td className="border border-black p-3">($0;0$)</td>
           </tr>
+
+          
+          </tbody>
         </table>
       </section>
     </MathJax>

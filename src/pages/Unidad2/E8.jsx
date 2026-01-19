@@ -34,14 +34,14 @@ function Ejercicio8() {
         </p>
         <p className="mt-2">2. Analizando las estrategias:</p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
+          <thead><tr>
             <th className="border border-black p-3"></th>
             <th className="border border-black p-3" colSpan="4">
               J2
             </th>
           </tr>
-
-          <tr>
+          </thead>
+          <tbody><tr>
             <th className="border border-black p-3" rowSpan="4">
               <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
@@ -53,12 +53,14 @@ function Ejercicio8() {
             <th className="border border-black p-3">100</th>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">0</th>
             <td className="border border-black p-3">($0;0$)</td>
             <td className="border border-black p-3">($0;50$)</td>
             <td className="border border-black p-3">($0;100$)</td>
           </tr>
+
 
           <tr>
             <th className="border border-black p-3">50</th>
@@ -67,12 +69,16 @@ function Ejercicio8() {
             <td className="border border-black p-3">($-10;-10$)</td>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">100</th>
             <td className="border border-black p-3">($100;0$)</td>
             <td className="border border-black p-3">($-10;-10$)</td>
             <td className="border border-black p-3">($-10;-10$)</td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p>
           Podemos ver que ninguna estrategia es estrictamente dominada. Cada
@@ -90,14 +96,14 @@ function Ejercicio8() {
           de Nash en este juego son:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
+          <thead><tr>
             <th className="border border-black p-3"></th>
             <th className="border border-black p-3" colSpan="4">
               J2
             </th>
           </tr>
-
-          <tr>
+          </thead>
+          <tbody><tr>
             <th className="border border-black p-3" rowSpan="4">
               <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
@@ -109,6 +115,7 @@ function Ejercicio8() {
             <th className="border border-black p-3">100</th>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">0</th>
             <td className="border border-black p-3">($0;0$)</td>
@@ -117,6 +124,7 @@ function Ejercicio8() {
               {"($\\textcolor{red}{0};\\textcolor{red}{100}$)"}
             </td>
           </tr>
+
 
           <tr>
             <th className="border border-black p-3">50</th>
@@ -127,6 +135,7 @@ function Ejercicio8() {
             <td className="border border-black p-3">($-10;-10$)</td>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">100</th>
             <td className="border border-black p-3">
@@ -135,6 +144,9 @@ function Ejercicio8() {
             <td className="border border-black p-3">($-10;-10$)</td>
             <td className="border border-black p-3">($-10;-10$)</td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">
           Los equilibrios de Nash son ($0, 0$), ($0, 50$), ($50, 0$) y ($50,

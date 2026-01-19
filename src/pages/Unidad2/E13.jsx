@@ -37,14 +37,14 @@ function Ejercicio13() {
           forma matricial:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
+          <thead><tr>
             <th className="border border-black p-3"></th>
             <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
+          </thead>
+          <tbody><tr>
             <th className="border border-black p-3" rowSpan="3">
               <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
@@ -55,17 +55,22 @@ function Ejercicio13() {
             <th className="border border-black p-3">No V</th>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">V</th>
             <td className="border border-black p-3">($1-c;1-c$)</td>
             <td className="border border-black p-3">($2-c;0$)</td>
           </tr>
 
+
           <tr>
             <th className="border border-black p-3">No V</th>
             <td className="border border-black p-3">($0;2-c$)</td>
             <td className="border border-black p-3">($1;1$)</td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">Para el punto 2.</p>
         <ol className="list-disc text-lg mt-4 pl-8">

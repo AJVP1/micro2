@@ -13,41 +13,47 @@ function Ejercicio4() {
           jugadores:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="4">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="4">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">D</th>
-            <th class="border border-black p-3">E</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">D</th>
+            <th className="border border-black p-3">E</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">($a;b$)</td>
-            <td class="border border-black p-3">($c;2$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">B</th>
-            <td class="border border-black p-3">($1;1$)</td>
-            <td class="border border-black p-3">($1;0$)</td>
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">($a;b$)</td>
+            <td className="border border-black p-3">($c;2$)</td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">C</th>
-            <td class="border border-black p-3">($3;2$)</td>
-            <td class="border border-black p-3">($0;1$)</td>
+            <th className="border border-black p-3">B</th>
+            <td className="border border-black p-3">($1;1$)</td>
+            <td className="border border-black p-3">($1;0$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">C</th>
+            <td className="border border-black p-3">($3;2$)</td>
+            <td className="border border-black p-3">($0;1$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
         <p>Indique para que valores de $a, b, c$:</p>
         <ol className="list-decimal list-inside mt-2">
@@ -84,37 +90,43 @@ function Ejercicio4() {
           }
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="2">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="2">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="4">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="4">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">D</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">D</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">($a;b$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">B</th>
-            <td class="border border-black p-3">($1;1$)</td>
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">($a;b$)</td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">C</th>
-            <td class="border border-black p-3">($3;2$)</td>
+            <th className="border border-black p-3">B</th>
+            <td className="border border-black p-3">($1;1$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">C</th>
+            <td className="border border-black p-3">($3;2$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">
           {
@@ -122,27 +134,31 @@ function Ejercicio4() {
           }
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="2">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="2">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="2">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="2">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">D</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">D</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">($a;b$)</td>
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">($a;b$)</td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">
           {

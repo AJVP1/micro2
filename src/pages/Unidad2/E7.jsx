@@ -35,74 +35,84 @@ function Ejercicio7() {
         </p>
 
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">A</th>
-            <th class="border border-black p-3">B</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">A</th>
+            <th className="border border-black p-3">B</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">($3;1$)</td>
-            <td class="border border-black p-3">($0;0$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">B</th>
-            <td class="border border-black p-3">($0;0$)</td>
-            <td class="border border-black p-3">($1;3$)</td>
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">($3;1$)</td>
+            <td className="border border-black p-3">($0;0$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">B</th>
+            <td className="border border-black p-3">($0;0$)</td>
+            <td className="border border-black p-3">($1;3$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
         <p>
           Para el punto 2. Seleccionamos las mejores respuestas para ambos
           jugadores.
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">A</th>
-            <th class="border border-black p-3">B</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">A</th>
+            <th className="border border-black p-3">B</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{3};\\textcolor{red}{1}$)"}
             </td>
-            <td class="border border-black p-3">($0;0$)</td>
+            <td className="border border-black p-3">($0;0$)</td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">B</th>
-            <td class="border border-black p-3">($0;0$)</td>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">B</th>
+            <td className="border border-black p-3">($0;0$)</td>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1};\\textcolor{red}{3}$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p>
           {

@@ -43,35 +43,40 @@ const Unidad2 = () => {
         </p>
 
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Callar</th>
-            <th class="border border-black p-3">Confesar</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Callar</th>
+            <th className="border border-black p-3">Confesar</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">Callar</th>
-            <td class="border border-black p-3">($0;0$)</td>
-            <td class="border border-black p-3">($-4;1$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">Confesar</th>
-            <td class="border border-black p-3">($1;-4$)</td>
-            <td class="border border-black p-3">($-2;-2$)</td>
+            <th className="border border-black p-3">Callar</th>
+            <td className="border border-black p-3">($0;0$)</td>
+            <td className="border border-black p-3">($-4;1$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">Confesar</th>
+            <td className="border border-black p-3">($1;-4$)</td>
+            <td className="border border-black p-3">($-2;-2$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
 
         <p className="mt-4">
@@ -108,39 +113,44 @@ const Unidad2 = () => {
         </p>
 
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Callar</th>
-            <th class="border border-black p-3">Confesar</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Callar</th>
+            <th className="border border-black p-3">Confesar</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">Callar</th>
-            <td class="border border-black p-3">($0;0$)</td>
-            <td class="border border-black p-3">($-4;1$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">Confesar</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">Callar</th>
+            <td className="border border-black p-3">($0;0$)</td>
+            <td className="border border-black p-3">($-4;1$)</td>
+          </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">Confesar</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1}; -4)$"}
             </td>
-            <td class="border border-black p-3">
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{-2}; -2)$"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
 
         <p className="mt-2">
@@ -149,39 +159,44 @@ const Unidad2 = () => {
         </p>
 
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Callar</th>
-            <th class="border border-black p-3">Confesar</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Callar</th>
+            <th className="border border-black p-3">Confesar</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">Callar</th>
-            <td class="border border-black p-3">($0;0$)</td>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">Callar</th>
+            <td className="border border-black p-3">($0;0$)</td>
+            <td className="border border-black p-3">
               {"($-4;\\textcolor{red}{1}$)"}
             </td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">Confesar</th>
-            <td class="border border-black p-3">($1;-4$)</td>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">Confesar</th>
+            <td className="border border-black p-3">($1;-4$)</td>
+            <td className="border border-black p-3">
               {"($-2;\\textcolor{red}{-2}$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
 
         <p className="mt-2">
@@ -205,35 +220,40 @@ const Unidad2 = () => {
         </h4>
         <p className="mt-2">Cambiando un poco el juego pasado:</p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Callar</th>
-            <th class="border border-black p-3">Confesar</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Callar</th>
+            <th className="border border-black p-3">Confesar</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">Callar</th>
-            <td class="border border-black p-3">($1;0$)</td>
-            <td class="border border-black p-3">($-4;1$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">Confesar</th>
-            <td class="border border-black p-3">($1;-4$)</td>
-            <td class="border border-black p-3">($-2;-2$)</td>
+            <th className="border border-black p-3">Callar</th>
+            <td className="border border-black p-3">($1;0$)</td>
+            <td className="border border-black p-3">($-4;1$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">Confesar</th>
+            <td className="border border-black p-3">($1;-4$)</td>
+            <td className="border border-black p-3">($-2;-2$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
 
         <p className="mt-2">
@@ -243,41 +263,46 @@ const Unidad2 = () => {
           $Confesar$. Viendolo en la tabla:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Callar</th>
-            <th class="border border-black p-3">Confesar</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Callar</th>
+            <th className="border border-black p-3">Confesar</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">Callar</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">Callar</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1};0$)"}
             </td>
-            <td class="border border-black p-3">($-4;1$)</td>
+            <td className="border border-black p-3">($-4;1$)</td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">Confesar</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">Confesar</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1};-4$)"}
             </td>
-            <td class="border border-black p-3">
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{-2};-2$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
 
         <p className="mt-2">
@@ -304,32 +329,37 @@ const Unidad2 = () => {
         </p>
 
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Confesar</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Confesar</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">Callar</th>
-            <td class="border border-black p-3">($-4;1$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">Confesar</th>
-            <td class="border border-black p-3">($-2, -2 $)</td>
+            <th className="border border-black p-3">Callar</th>
+            <td className="border border-black p-3">($-4;1$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">Confesar</th>
+            <td className="border border-black p-3">($-2, -2 $)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
 
         <p className="mt-2">
@@ -340,26 +370,30 @@ const Unidad2 = () => {
         </p>
 
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="2">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="2">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="2">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="2">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">Confesar</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">Confesar</th>
           </tr>
+
           <tr>
-            <th class="border border-black p-3">Confesar</th>
-            <td class="border border-black p-3">($-2, -2 $)</td>
+            <th className="border border-black p-3">Confesar</th>
+            <td className="border border-black p-3">($-2, -2 $)</td>
           </tr>
+
+          
+          </tbody>
         </table>
 
         <p>Llegamos al resultado donde ambos jugadores confesarán.</p>
@@ -401,74 +435,84 @@ const Unidad2 = () => {
         </p>
         <p className="mt-2">Representandolo en una tabla:</p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">T</th>
-            <th class="border border-black p-3">C</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">T</th>
+            <th className="border border-black p-3">C</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">T</th>
-            <td class="border border-black p-3">($3; 1$)</td>
-            <td class="border border-black p-3">($0; 0$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">C</th>
-            <td class="border border-black p-3">($0; 0$)</td>
-            <td class="border border-black p-3">($1; 3$)</td>
+            <th className="border border-black p-3">T</th>
+            <td className="border border-black p-3">($3; 1$)</td>
+            <td className="border border-black p-3">($0; 0$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">C</th>
+            <td className="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">($1; 3$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
 
         <p className="mt-2">
           Vemos que escogería en primer jugador dada la elección del segundo.
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">T</th>
-            <th class="border border-black p-3">C</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">T</th>
+            <th className="border border-black p-3">C</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">T</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">T</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{3}; 1$)"}
             </td>
-            <td class="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">($0; 0$)</td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">C</th>
-            <td class="border border-black p-3">($0; 0$)</td>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">C</th>
+            <td className="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1}; 3$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
 
         <p>
@@ -476,77 +520,87 @@ const Unidad2 = () => {
           primero.
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">T</th>
-            <th class="border border-black p-3">C</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">T</th>
+            <th className="border border-black p-3">C</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">T</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">T</th>
+            <td className="border border-black p-3">
               {"($3; \\textcolor{red}{1}$)"}
             </td>
-            <td class="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">($0; 0$)</td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">C</th>
-            <td class="border border-black p-3">($0; 0$)</td>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">C</th>
+            <td className="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">
               {"($1; \\textcolor{red}{3}$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">
           Uniendo ambas elecciones en una misma tabla tenemos:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">T</th>
-            <th class="border border-black p-3">C</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">T</th>
+            <th className="border border-black p-3">C</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">T</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">T</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{3}; \\textcolor{red}{1}$)"}
             </td>
-            <td class="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">($0; 0$)</td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">C</th>
-            <td class="border border-black p-3">($0; 0$)</td>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">C</th>
+            <td className="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1}; \\textcolor{red}{3}$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">
           {
@@ -569,35 +623,40 @@ const Unidad2 = () => {
         </p>
         <p className="mt-2">Representandolo en una tabla:</p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">A</th>
-            <th class="border border-black p-3">B</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">A</th>
+            <th className="border border-black p-3">B</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">($1; -1$)</td>
-            <td class="border border-black p-3">($-1; 1$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">B</th>
-            <td class="border border-black p-3">($-1; 1$)</td>
-            <td class="border border-black p-3">($1; -1$)</td>
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">($1; -1$)</td>
+            <td className="border border-black p-3">($-1; 1$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">B</th>
+            <td className="border border-black p-3">($-1; 1$)</td>
+            <td className="border border-black p-3">($1; -1$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">
           Analizando las mejores respuestas de cada jugador, el jugador 1
@@ -607,43 +666,48 @@ const Unidad2 = () => {
           tabla:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">A</th>
-            <th class="border border-black p-3">B</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">A</th>
+            <th className="border border-black p-3">B</th>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1}; -1$)"}
             </td>
-            <td class="border border-black p-3">
+            <td className="border border-black p-3">
               {"$(-1; \\textcolor{red}{1})$"}
             </td>
           </tr>
 
+
           <tr>
-            <th class="border border-black p-3">B</th>
-            <td class="border border-black p-3">
+            <th className="border border-black p-3">B</th>
+            <td className="border border-black p-3">
               {"$(-1; \\textcolor{red}{1})$"}
             </td>
-            <td class="border border-black p-3">
+            <td className="border border-black p-3">
               {"($\\textcolor{red}{1}; -1$)"}
             </td>
           </tr>
+
+          
+          </tbody>
         </table>
         <p>
           Por lo tanto, tenemos un juego que no tiene equilibrios de Nash en
@@ -697,35 +761,40 @@ const Unidad2 = () => {
           este juego. Y la tabla de pagos era:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">A</th>
-            <th class="border border-black p-3">B</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">A</th>
+            <th className="border border-black p-3">B</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">A</th>
-            <td class="border border-black p-3">($1; -1$)</td>
-            <td class="border border-black p-3">($-1; 1$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">B</th>
-            <td class="border border-black p-3">($-1; 1$)</td>
-            <td class="border border-black p-3">($1; -1$)</td>
+            <th className="border border-black p-3">A</th>
+            <td className="border border-black p-3">($1; -1$)</td>
+            <td className="border border-black p-3">($-1; 1$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">B</th>
+            <td className="border border-black p-3">($-1; 1$)</td>
+            <td className="border border-black p-3">($1; -1$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
 
         <p>
@@ -807,35 +876,40 @@ const Unidad2 = () => {
         </h4>
         <p className="mt-2">El juego tiene la siguiente tabla</p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <tr>
-            <th class="border border-black p-3"></th>
-            <th class="border border-black p-3" colspan="3">
+          <thead><tr>
+            <th className="border border-black p-3"></th>
+            <th className="border border-black p-3" colSpan="3">
               J2
             </th>
           </tr>
-
-          <tr>
-            <th class="border border-black p-3" rowspan="3">
-              <div class="flex flex-col items-center justify-center leading-none">
+          </thead>
+          <tbody><tr>
+            <th className="border border-black p-3" rowSpan="3">
+              <div className="flex flex-col items-center justify-center leading-none">
                 <span>J1</span>
               </div>
             </th>
-            <th class="border border-black p-3">Estrategias</th>
-            <th class="border border-black p-3">T</th>
-            <th class="border border-black p-3">C</th>
+            <th className="border border-black p-3">Estrategias</th>
+            <th className="border border-black p-3">T</th>
+            <th className="border border-black p-3">C</th>
           </tr>
 
-          <tr>
-            <th class="border border-black p-3">T</th>
-            <td class="border border-black p-3">($3; 1$)</td>
-            <td class="border border-black p-3">($0; 0$)</td>
-          </tr>
 
           <tr>
-            <th class="border border-black p-3">C</th>
-            <td class="border border-black p-3">($0; 0$)</td>
-            <td class="border border-black p-3">($1; 3$)</td>
+            <th className="border border-black p-3">T</th>
+            <td className="border border-black p-3">($3; 1$)</td>
+            <td className="border border-black p-3">($0; 0$)</td>
           </tr>
+
+
+          <tr>
+            <th className="border border-black p-3">C</th>
+            <td className="border border-black p-3">($0; 0$)</td>
+            <td className="border border-black p-3">($1; 3$)</td>
+          </tr>
+
+          
+          </tbody>
         </table>
         <p className="mt-2">
           Siguiendo un procedimiento similar al del juego de combinación de
