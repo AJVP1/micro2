@@ -233,8 +233,8 @@ function Ejercicio1() {
           </li>
         </ul>
         <p className="mt-2">
-          Después de eliminar las estrategias estrictamente dominadas, la matriz
-          de pagos queda como sigue:
+          Después de eliminar la estrategia estrictamente dominada, la matriz de
+          pagos queda como sigue:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
           <tr>

@@ -42,34 +42,36 @@ const Unidad2 = () => {
           Veamos el siguiente juego llamado <em>dilema del prisionero</em>.
         </p>
 
-        <table className="mt-4 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">Callar</td>
-              <td className="border border-black p-3">Confesar</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">Callar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-4; 1)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">Confesar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; -4)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-2; -2)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">Callar</th>
+            <th class="border border-black p-3">Confesar</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Callar</th>
+            <td class="border border-black p-3">($0;0$)</td>
+            <td class="border border-black p-3">($-4;1$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Confesar</th>
+            <td class="border border-black p-3">($1;-4$)</td>
+            <td class="border border-black p-3">($-2;-2$)</td>
+          </tr>
         </table>
 
         <p className="mt-4">
@@ -91,48 +93,54 @@ const Unidad2 = () => {
             "$$u_i(s_i', s_{-i}) > u_i(s_i, s_{-i}) \\quad \\forall s_{-i} \\in S_{-i}$$"
           }
         </p>
+        <p className="mt-2">
+          En criollo: una estrategia domina estrictamente a otra solo si siempre
+          es mejor, sin importar lo que hagan los demás jugadores.
+        </p>
 
         <h4 className="mt-6">
           <strong>Aplicación al dilema del prisionero</strong>
         </h4>
-        <p className="mt-2">
-          La idea es escoger la estrategia que maximice el pago para cada
-          jugador, dado lo que el otro jugador elija.
-        </p>
         <p className="mt-2">
           El primer jugador va a decidir confesar cuando el segundo jugador
           decida confesar, y decidirá confesar cuando el segunda jugador decida
           callar. Viendolo en la tabla:
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">Callar</td>
-              <td className="border border-black p-3">Confesar</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">Callar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-4; 1)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">Confesar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{1}; -4)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{-2}; -2)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">Callar</th>
+            <th class="border border-black p-3">Confesar</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Callar</th>
+            <td class="border border-black p-3">($0;0$)</td>
+            <td class="border border-black p-3">($-4;1$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Confesar</th>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{1}; -4)$"}
+            </td>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{-2}; -2)$"}
+            </td>
+          </tr>
         </table>
 
         <p className="mt-2">
@@ -140,41 +148,47 @@ const Unidad2 = () => {
           decidirá confesar cuando el primero decida callar.
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">Callar</td>
-              <td className="border border-black p-3">Confesar</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">Callar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-4; \\textcolor{red}{1})$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">Confesar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; -4)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-2; \\textcolor{red}{-2})$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">Callar</th>
+            <th class="border border-black p-3">Confesar</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Callar</th>
+            <td class="border border-black p-3">($0;0$)</td>
+            <td class="border border-black p-3">
+              {"($-4;\\textcolor{red}{1}$)"}
+            </td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Confesar</th>
+            <td class="border border-black p-3">($1;-4$)</td>
+            <td class="border border-black p-3">
+              {"($-2;\\textcolor{red}{-2}$)"}
+            </td>
+          </tr>
         </table>
 
         <p className="mt-2">
-          En el dilema del prisionero, la estrategia "Confesar" es estrictamente
-          dominada para ambos jugadores, ya que independientemente de lo que
-          haga el otro jugador, "Confesar" siempre ofrece un pago mayor que
-          "Callar".
+          En el dilema del prisionero, la estrategia $Confesar$ domina
+          estrictamente a la estrategia $Callar$ para ambos jugadores, ya que
+          independientemente de lo que haga el otro jugador, $Confesar$ siempre
+          ofrece un pago mayor que $Callar$.
         </p>
 
         <h4 className="mt-4">
@@ -182,86 +196,93 @@ const Unidad2 = () => {
         </h4>
         <p className="mt-2">
           Un jugador es racional si no elige estrategias estrictamente
-          dominadas.
-        </p>
-        <p className="mt-2">
-          Para el caso anterior del dilema del prisionero, diríamos que los
-          jugadores 1 y 2 son racionales si no escojen callar.
+          dominadas. Para el caso anterior del dilema del prisionero, diríamos
+          que los jugadores 1 y 2 son racionales si no escojen callar.
         </p>
 
         <h4 className="mt-4">
           <strong>Otro caso de dilema del prisionero</strong>
         </h4>
         <p className="mt-2">Cambiando un poco el juego pasado:</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">Callar</td>
-              <td className="border border-black p-3">Confesar</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">Callar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-4; 1)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">Confesar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; -4)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-2; -2)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">Callar</th>
+            <th class="border border-black p-3">Confesar</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Callar</th>
+            <td class="border border-black p-3">($1;0$)</td>
+            <td class="border border-black p-3">($-4;1$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Confesar</th>
+            <td class="border border-black p-3">($1;-4$)</td>
+            <td class="border border-black p-3">($-2;-2$)</td>
+          </tr>
         </table>
 
         <p className="mt-2">
-          Veamos que pasa para el primer jugador. Si el jugador 2 escoge callar,
-          el jugador 1 es indifirente entre callar y confesar. Mientras que si
-          el jugador 2 escoge confesar, el jugador 1 prefiere confesar. Viendolo
-          en la tabla:
+          Veamos que pasa para el primer jugador. Si el jugador 2 escoge
+          $Callar$, el jugador 1 es indifirente entre $Callar$ y $Confesar$.
+          Mientras que si el jugador 2 escoge $Confesar$, el jugador 1 prefiere
+          $Confesar$. Viendolo en la tabla:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">Callar</td>
-              <td className="border border-black p-3">Confesar</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">Callar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{1}; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-4; 1)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">Confesar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{1}; -4)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{-2}; -2)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">Callar</th>
+            <th class="border border-black p-3">Confesar</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Callar</th>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{1};0$)"}
+            </td>
+            <td class="border border-black p-3">($-4;1$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Confesar</th>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{1};-4$)"}
+            </td>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{-2};-2$)"}
+            </td>
+          </tr>
         </table>
 
         <p className="mt-2">
-          Mientras que para el segundo jugador se sigue mantiendo la EED
-          (Estrategia Estrictamente Dominada).
+          Por lo tanto, ahora la estrategia $Callar$ no es estrictamente
+          dominada por la estrategia $Confesar$ para el jugador 1.
         </p>
 
         <h4 className="mt-4">
@@ -282,52 +303,65 @@ const Unidad2 = () => {
           juego reducido:
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">Confesar</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">Callar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(-4; 1)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">Confesar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(-2; -2)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">Confesar</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Callar</th>
+            <td class="border border-black p-3">($-4;1$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">Confesar</th>
+            <td class="border border-black p-3">($-2, -2 $)</td>
+          </tr>
         </table>
 
         <p className="mt-2">
-          Ahora, al primer jugador tendrá que decidir entre callar o confesar,
-          que viendo la matriz de pagos podemos ver que callar es EED por la
-          estrategia confesar, por lo que podemos quitar la fila de callar,
-          quedando el juego reducido:
+          Ahora, al primer jugador tendrá que decidir entre $Callar$ o
+          $Confesar$, que viendo la matriz de pagos podemos ver que $Callar$ es
+          EED por la estrategia $Confesar$, por lo que podemos quitar la fila de
+          $Callar$, quedando el juego reducido:
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">Confesar</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">Confesar</td>
-              <td className="border border-black p-3 text-center">
-                {"$(-2; -2)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="2">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="2">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">Confesar</th>
+          </tr>
+          <tr>
+            <th class="border border-black p-3">Confesar</th>
+            <td class="border border-black p-3">($-2, -2 $)</td>
+          </tr>
         </table>
+
         <p>Llegamos al resultado donde ambos jugadores confesarán.</p>
 
         <h4 className="mt-4">
@@ -366,138 +400,158 @@ const Unidad2 = () => {
           sea para realizar la actividad que prefiere el cónyuge.
         </p>
         <p className="mt-2">Representandolo en una tabla:</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">T</td>
-              <td className="border border-black p-3">C </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">T</td>
-              <td className="border border-black p-3 text-center">
-                {"$(3; 1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">C</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; 3)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">T</th>
+            <th class="border border-black p-3">C</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">T</th>
+            <td class="border border-black p-3">($3; 1$)</td>
+            <td class="border border-black p-3">($0; 0$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">C</th>
+            <td class="border border-black p-3">($0; 0$)</td>
+            <td class="border border-black p-3">($1; 3$)</td>
+          </tr>
         </table>
 
         <p className="mt-2">
           Vemos que escogería en primer jugador dada la elección del segundo.
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">T</td>
-              <td className="border border-black p-3">C </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">T</td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{3}; 1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">C</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{1}; 3)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">T</th>
+            <th class="border border-black p-3">C</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">T</th>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{3}; 1$)"}
+            </td>
+            <td class="border border-black p-3">($0; 0$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">C</th>
+            <td class="border border-black p-3">($0; 0$)</td>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{1}; 3$)"}
+            </td>
+          </tr>
         </table>
 
         <p>
           Ahora vemos que decide que el segundo jugador dada la elección del
           primero.
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">T</td>
-              <td className="border border-black p-3">C </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">T</td>
-              <td className="border border-black p-3 text-center">
-                {"$(3; \\textcolor{red}{1})$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">C</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; \\textcolor{red}{3})$"}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
 
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">T</th>
+            <th class="border border-black p-3">C</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">T</th>
+            <td class="border border-black p-3">
+              {"($3; \\textcolor{red}{1}$)"}
+            </td>
+            <td class="border border-black p-3">($0; 0$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">C</th>
+            <td class="border border-black p-3">($0; 0$)</td>
+            <td class="border border-black p-3">
+              {"($1; \\textcolor{red}{3}$)"}
+            </td>
+          </tr>
+        </table>
         <p className="mt-2">
           Uniendo ambas elecciones en una misma tabla tenemos:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">T</td>
-              <td className="border border-black p-3">C </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">T</td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{3}; \\textcolor{red}{1})$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">C</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{1}; \\textcolor{red}{3})$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">T</th>
+            <th class="border border-black p-3">C</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">T</th>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{3}; \\textcolor{red}{1}$)"}
+            </td>
+            <td class="border border-black p-3">($0; 0$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">C</th>
+            <td class="border border-black p-3">($0; 0$)</td>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{1}; \\textcolor{red}{3}$)"}
+            </td>
+          </tr>
         </table>
         <p className="mt-2">
-          Por lo tanto, tenemos dos equilibrios de Nash en este juego: (T, T)
-          y(C, C).
+          {
+            "Por lo tanto, tenemos dos equilibrios de Nash en este juego: $EN = \\{(T; T), (C; C)\\}$. Dado que en estos puntos, ningún jugador tiene incentivos a desviarse."
+          }
         </p>
 
         <h4 className="mt-4">
@@ -514,34 +568,36 @@ const Unidad2 = () => {
           cruz, el jugador 2 gana 1 unidad y el jugador 1 pierde 1 unidad.
         </p>
         <p className="mt-2">Representandolo en una tabla:</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">A</td>
-              <td className="border border-black p-3">B</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">A</td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; -1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-1; 1)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">B</td>
-              <td className="border border-black p-3 text-center">
-                {"$(-1; 1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; -1)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">A</th>
+            <th class="border border-black p-3">B</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">A</th>
+            <td class="border border-black p-3">($1; -1$)</td>
+            <td class="border border-black p-3">($-1; 1$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">B</th>
+            <td class="border border-black p-3">($-1; 1$)</td>
+            <td class="border border-black p-3">($1; -1$)</td>
+          </tr>
         </table>
         <p className="mt-2">
           Analizando las mejores respuestas de cada jugador, el jugador 1
@@ -550,37 +606,52 @@ const Unidad2 = () => {
           equilibrio de Nash en estrategias puras en este juego. Viendolo en la
           tabla:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">A</td>
-              <td className="border border-black p-3">B</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">A</td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{1}; -1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-1; \\textcolor{red}{1})$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">B</td>
-              <td className="border border-black p-3 text-center">
-                {"$(-1; \\textcolor{red}{1})$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(\\textcolor{red}{1}; -1)$"}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
 
-        <h4>
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">A</th>
+            <th class="border border-black p-3">B</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">A</th>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{1}; -1$)"}
+            </td>
+            <td class="border border-black p-3">
+              {"$(-1; \\textcolor{red}{1})$"}
+            </td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">B</th>
+            <td class="border border-black p-3">
+              {"$(-1; \\textcolor{red}{1})$"}
+            </td>
+            <td class="border border-black p-3">
+              {"($\\textcolor{red}{1}; -1$)"}
+            </td>
+          </tr>
+        </table>
+        <p>
+          Por lo tanto, tenemos un juego que no tiene equilibrios de Nash en
+          estrategias puras y tampoco se puede resolver con Estrategias
+          Estrictamente Dominantes.
+        </p>
+
+        <h4 className="mt-4">
           <strong>Definición de Estrategia Mixta</strong>
         </h4>
         <p className="mt-2">
@@ -591,14 +662,13 @@ const Unidad2 = () => {
           con esa distribución.
         </p>
         <p className="mt-2">
-          Por ejemplo, si un jugador tiene dos estrategias puras A y B, una
-          estrategia mixta podría ser elegir A con una probabilidad del 70% y B
-          con una probabilidad del 30%.
+          Por ejemplo, si un jugador tiene dos estrategias puras $A$ y $B$, una
+          estrategia mixta podría ser elegir $A$ con una probabilidad del 70% y
+          $B$ con una probabilidad del 30%.
         </p>
 
         <h4 className="mt-4">
           <strong>
-            {" "}
             Definición de Equilibrio de Nash con estrategias mixtas
           </strong>
         </h4>
@@ -626,34 +696,36 @@ const Unidad2 = () => {
           Recordemos que no había equilibrio de Nash en estrategias puras en
           este juego. Y la tabla de pagos era:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">A</td>
-              <td className="border border-black p-3">B</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">A</td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; -1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(-1; 1)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">B</td>
-              <td className="border border-black p-3 text-center">
-                {"$(-1; 1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; -1)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">A</th>
+            <th class="border border-black p-3">B</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">A</th>
+            <td class="border border-black p-3">($1; -1$)</td>
+            <td class="border border-black p-3">($-1; 1$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">B</th>
+            <td class="border border-black p-3">($-1; 1$)</td>
+            <td class="border border-black p-3">($1; -1$)</td>
+          </tr>
         </table>
 
         <p>
@@ -664,20 +736,22 @@ const Unidad2 = () => {
           jugador 1 de la siguiente manera:
         </p>
         <p className="mt-2">
-          {"$$E[u_i(p, q)] = p \\cdot E(A, q) + (1-p) \\cdot E(B, q)$$ "}
+          {
+            "$$E[u_1(p, q)] = p \\cdot E[u_1(A, q)] + (1-p) \\cdot E[u_1(B, q)]$$ "
+          }
         </p>
         <p className="mt-2">
-          Donde $E(A, q)$ es la utilidad esperada del jugador 1 cuando elige A y
-          el jugador 2 elige su estrategia mixta con probabilidad $q$.
-          Similarmente, $E(B, q)$ es la utilidad esperada del jugador 1 cuando
-          elige B.
+          Donde $E[u_1(A, q)]$ es la utilidad esperada del jugador 1 cuando
+          elige $A$ y el jugador 2 elige su estrategia mixta con probabilidad
+          $q$. Similarmente, $E[u_1(B, q)]$ es la utilidad esperada del jugador
+          1 cuando elige $B$ dada la estrategia mixta del otro jugador.
         </p>
         <p className="mt-2">Calculando estas utilidades esperadas:</p>
         <p className="mt-2">
-          {"$$E(A, q) = q \\cdot 1 + (1-q) \\cdot (-1) = 2q - 1$$"}
+          {"$$E[u_1(A, q)] = 1 \\cdot q + (-1) \\cdot (1-q) = 2q - 1$$"}
         </p>
         <p className="mt-2">
-          {"$$E(B, q) = q \\cdot (-1) + (1-q) \\cdot 1 = 1 - 2q$$"}
+          {"$$E[u_1(B, q)] = (-1) \\cdot q + 1 \\cdot (1-q) = 1 - 2q$$"}
         </p>
         <p className="mt-2">Entonces, la utilidad esperada del jugador 1 es:</p>
         <p className="mt-2">
@@ -732,34 +806,36 @@ const Unidad2 = () => {
           <strong>Aplicación al juego de "guerra de los sexos"</strong>
         </h4>
         <p className="mt-2">El juego tiene la siguiente tabla</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto">
-          <thead>
-            <tr>
-              <td className="p-3"></td>
-              <td className="border border-black p-3">T</td>
-              <td className="border border-black p-3">C </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-black p-3 font-medium">T</td>
-              <td className="border border-black p-3 text-center">
-                {"$(3; 1)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-black p-3 font-medium">C</td>
-              <td className="border border-black p-3 text-center">
-                {"$(0; 0)$"}
-              </td>
-              <td className="border border-black p-3 text-center">
-                {"$(1; 3)$"}
-              </td>
-            </tr>
-          </tbody>
+        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
+          <tr>
+            <th class="border border-black p-3"></th>
+            <th class="border border-black p-3" colspan="3">
+              J2
+            </th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3" rowspan="3">
+              <div class="flex flex-col items-center justify-center leading-none">
+                <span>J1</span>
+              </div>
+            </th>
+            <th class="border border-black p-3">Estrategias</th>
+            <th class="border border-black p-3">T</th>
+            <th class="border border-black p-3">C</th>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">T</th>
+            <td class="border border-black p-3">($3; 1$)</td>
+            <td class="border border-black p-3">($0; 0$)</td>
+          </tr>
+
+          <tr>
+            <th class="border border-black p-3">C</th>
+            <td class="border border-black p-3">($0; 0$)</td>
+            <td class="border border-black p-3">($1; 3$)</td>
+          </tr>
         </table>
         <p className="mt-2">
           Siguiendo un procedimiento similar al del juego de combinación de
@@ -770,14 +846,16 @@ const Unidad2 = () => {
         </p>
         <p className="mt-2">La utilidad esperada del jugador 1 es:</p>
         <p className="mt-2">
-          {"$$E[u_1(p, q)] = p \\cdot E(T, q) + (1-p) \\cdot E(C, q)$$"}
+          {
+            "$$E[u_1(p, q)] = p \\cdot E[u_1(T, q)] + (1-p) \\cdot E[u_1(C, q)]$$"
+          }
         </p>
         <p className="mt-2">Calculando estas utilidades esperadas:</p>
         <p className="mt-2">
-          {"$$E(T, q) = q \\cdot 3 + (1-q) \\cdot 0 = 3q$$"}
+          {"$$E[u_1(T, q)] = q \\cdot 3 + (1-q) \\cdot 0 = 3q$$"}
         </p>
         <p className="mt-2">
-          {"$$E(C, q) = q \\cdot 0 + (1-q) \\cdot 1 = 1 - q$$"}
+          {"$$E[u_1(C, q)] = q \\cdot 0 + (1-q) \\cdot 1 = 1 - q$$"}
         </p>
         <p className="mt-2">Entonces, la utilidad esperada del jugador 1 es:</p>
         <p className="mt-2">
@@ -789,14 +867,16 @@ const Unidad2 = () => {
           De manera similar, la utilidad esperada del jugador 2 es:
         </p>
         <p className="mt-2">
-          {"$$E[u_2(p, q)] = q \\cdot E(T, p) + (1-q) \\cdot E(C, p)$$"}
+          {
+            "$$E[u_2(p, q)] = q \\cdot E[u_2(T, p)] + (1-q) \\cdot E[u_2(C, p)]$$"
+          }
         </p>
         <p className="mt-2">Calculando estas utilidades esperadas:</p>
         <p className="mt-2">
-          {"$$E(T, p) = p \\cdot 1 + (1-p) \\cdot 0 = p$$"}
+          {"$$E[u_2(T, p)] = p \\cdot 1 + (1-p) \\cdot 0 = p$$"}
         </p>
         <p className="mt-2">
-          {"$$E(C, p) = p \\cdot 0 + (1-p) \\cdot 3 = 3(1 - p)$$"}
+          {"$$E[u_2(C, p)] = p \\cdot 0 + (1-p) \\cdot 3 = 3(1 - p)$$"}
         </p>
         <p className="mt-2">Entonces, la utilidad esperada del jugador 2 es:</p>
         <p className="mt-2">
@@ -823,14 +903,40 @@ const Unidad2 = () => {
         </p>
         <p className="mt-2">
           {
-            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que el jugador 1 elija T con una probabilidad del 75% y C con una probabilidad del 25%, mientras que el jugador 2 elija T con una probabilidad del 25% y C con una probabilidad del 75%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $(p^*, q^*) = \\left(\\frac{3}{4}, \\frac{1}{4}\\right)$."
+            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que el jugador 1 elija $T$ con una probabilidad del 75% y $C$ con una probabilidad del 25%, mientras que el jugador 2 elija $T$ con una probabilidad del 25% y $C$ con una probabilidad del 75%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $(p^*, q^*) = \\left(\\frac{3}{4}, \\frac{1}{4}\\right)$."
           }
         </p>
+
+        <h4 className="mt-4">
+          <strong>Que vimos?</strong>
+        </h4>
+        <ul className="list-disc list-inside mt-2">
+          <li>
+            Un juego consiste de tres elementos: jugadores, estrategias y pagos.
+          </li>
+          <li>
+            Definición de Estrategias Estrictamente Dominantes (EED) y cómo
+            aplicarlas para simplificar el análisis de un juego.
+          </li>
+          <li>
+            Equilibrio de Nash en estrategias puras y cómo identificarlo en una
+            matriz de pagos.
+          </li>
+          <li>
+            Proceso: Buscar mejores respuestas para cada jugador. Estas nos
+            pueden dar un indicio de cuales son EED. Verificar EED. Buscar
+            equilibrios donde las mejores respuestas coincidan.
+          </li>
+          <li>
+            Estrategias mixtas y cómo encontrar equilibrios de Nash en
+            estrategias mixtas.
+          </li>
+        </ul>
 
         {/* Practica */}
         <h3 className="text-2xl font-semibold text-[#1d2554] mt-6">Práctica</h3>
         <hr />
-        <ul className="flex gap-2">
+        <ul className="flex gap-2 flex-wrap">
           <Link
             to={`/juegos-estaticos-informacion-completa/ejercicio-1`}
             className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
@@ -843,8 +949,89 @@ const Unidad2 = () => {
           >
             Ejercicio 2
           </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-3`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 3
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-4`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 4
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-5`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 5
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-6`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 6
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-7`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 7
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-8`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 8
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-9`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 9
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-10`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 10
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-11`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 11
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-12`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 12
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-13`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 13
+          </Link>
+          <Link
+            to={`/juegos-estaticos-informacion-completa/ejercicio-14`}
+            className="bg-[#1d2554] text-white px-4 py-2 rounded mt-4 hover:bg-[#374785] transition-colors"
+          >
+            Ejercicio 14
+          </Link>
         </ul>
         <Outlet />
+        <hr className="mt-6" />
+        <h3 className="text-2xl font-semibold text-[#1d2554] mt-4">Contacto</h3>
+        <p className="mt-2 mb-6">
+          Para alguna modificación o sugerencia, por favor mandar mail a{" "}
+          <a href="mailto:armando.charal1998@gmail.com">
+            armando.charal1998@gmail.com
+          </a>
+          .
+        </p>
       </section>
     </MathJax>
   );

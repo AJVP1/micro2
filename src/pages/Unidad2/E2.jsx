@@ -129,11 +129,16 @@ function Ejercicio2() {
         <p className="mt-2">
           Para el punto a. vemos la matriz de pagos y podríamos pensar que hay
           estrategias estrictamente dominadas porque el jugador 2 no escoge la
-          opción C. Sin embargo, al analizar con más detalle, podemos ver que no
-          hay estrategias dominantes para ninguno de los jugadores. Por lo
-          tanto, no se puede resolver por eliminación de estrategias
-          estrictamente dominadas.
+          opción C. Pero al analizar vemos que ninguna de las estrategias la
+          dominan estrictamente.
         </p>
+        <p className="mt-2">
+          Mientras que para el jugador 1, vemos que en algún momento escoge
+          ambas estrategias, por lo que ninguna de las dos domina estrictamente
+          a la otra. Por lo tanto, no se puede resolver por eliminación iterada
+          de estrategias dominadas.:
+        </p>
+        <p className="mt-2">Viendolo en la tabla:</p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
           <tr>
             <th class="border border-black p-3"></th>
@@ -174,13 +179,15 @@ function Ejercicio2() {
               {"$(2;\\textcolor{red}{10})$"}
             </td>
             <td class="border border-black p-3">
-              {"$(1;\\textcolor{red}{3})$"}
+              {"($\\textcolor{red}{1};3$)"}
             </td>
           </tr>
         </table>
         <p>
-          El equilibrio se da en ($UP, A$), ya que en este punto ninguno de los
-          jugadores tiene incentivos para desviarse unilateralmente.
+          Por ultimo, vemos que ambas mejores respuestas se coinciden en ($UP,
+          A$), y después de analizarlo podemos observar que en este punto
+          ninguno de los jugadores tiene incentivos para desviarse
+          unilateralmente.
         </p>
 
         <p className="mt-2">
@@ -298,10 +305,18 @@ function Ejercicio2() {
           </tr>
         </table>
         <p>
-          Podemos ver que la estrategia $C$ para el jugador 2 es dominada
-          estrictamente por la estrategia $B$. Por lo tanto, podemos eliminar la
-          estrategia $C$ para el jugador 2 y analizar el juego reducido.
-          Quedando la matriz de pagos como:
+          Por un lado, podemos ver que las mejores respuestas coinciden ($Down,
+          A$), y después de analizarla verificamos que en este punto ninguno de
+          los jugadores tiene incentivos para desviarse unilateralmente. Ahora
+          veamos si se puede resolver por eliminación iterada de estrategias
+          dominadas.
+        </p>
+        <p>
+          Podemos observar que la estrategia $C$ nunca es escogida por el
+          jugador 2, y después de analizarlo podemos observar que la estrategia
+          $C$ para el jugador 2 es dominada estrictamente por la estrategia $B$.
+          Por lo tanto, podemos eliminar la estrategia $C$ para el jugador 2 y
+          analizar el juego reducido. Quedando la matriz de pagos como:
         </p>
         <table className="mt-7 mb-7 border-collapse mx-auto text-center">
           <tr>
@@ -404,10 +419,6 @@ function Ejercicio2() {
             </td>
           </tr>
         </table>
-        <p>
-          El único equilibrio de Nash en estrategias puras es que el jugador 1
-          elija $Down$ y el jugador 2 elija $A$.
-        </p>
       </section>
     </MathJax>
   );
