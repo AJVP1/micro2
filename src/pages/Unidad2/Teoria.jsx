@@ -2,6 +2,8 @@
 import { Link, Outlet } from "react-router-dom";
 // importamos MathJax para formulas matematicas
 import { MathJax } from "better-react-mathjax";
+// importamos componente de tabla de juegos
+import GameTable from "../../components/ui/GameTable";
 
 const Unidad2 = () => {
   return (
@@ -42,42 +44,14 @@ const Unidad2 = () => {
           Veamos el siguiente juego llamado <em>dilema del prisionero</em>.
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">Callar</th>
-            <th className="border border-black p-3">Confesar</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Callar</th>
-            <td className="border border-black p-3">($0;0$)</td>
-            <td className="border border-black p-3">($-4;1$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Confesar</th>
-            <td className="border border-black p-3">($1;-4$)</td>
-            <td className="border border-black p-3">($-2;-2$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["Callar", "Confesar"]}
+          player2Strategies={["Callar", "Confesar"]}
+          payoffs={[
+            ["($0;0$)", "($-4;1$)"],
+            ["($1;-4$)", "($-2;-2$)"],
+          ]}
+        />
 
         <p className="mt-4">
           {
@@ -112,92 +86,28 @@ const Unidad2 = () => {
           callar. Viendolo en la tabla:
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">Callar</th>
-            <th className="border border-black p-3">Confesar</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Callar</th>
-            <td className="border border-black p-3">($0;0$)</td>
-            <td className="border border-black p-3">($-4;1$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Confesar</th>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1}; -4)$"}
-            </td>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{-2}; -2)$"}
-            </td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["Callar", "Confesar"]}
+          player2Strategies={["Callar", "Confesar"]}
+          payoffs={[
+            ["($0;0$)", "($-4;1$)"],
+            ["($\\textcolor{red}{1}; -4)$", "($\\textcolor{red}{-2}; -2)$"],
+          ]}
+        />
 
         <p className="mt-2">
           El segundo jugador va a decidir confesar cuando el primero confiese; y
           decidirá confesar cuando el primero decida callar.
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">Callar</th>
-            <th className="border border-black p-3">Confesar</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Callar</th>
-            <td className="border border-black p-3">($0;0$)</td>
-            <td className="border border-black p-3">
-              {"($-4;\\textcolor{red}{1}$)"}
-            </td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Confesar</th>
-            <td className="border border-black p-3">($1;-4$)</td>
-            <td className="border border-black p-3">
-              {"($-2;\\textcolor{red}{-2}$)"}
-            </td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["Callar", "Confesar"]}
+          player2Strategies={["Callar", "Confesar"]}
+          payoffs={[
+            ["($0;0$)", "($-4;\\textcolor{red}{1}$)"],
+            ["($1;-4$)", "($-2;\\textcolor{red}{-2}$)"],
+          ]}
+        />
 
         <p className="mt-2">
           En el dilema del prisionero, la estrategia $Confesar$ domina
@@ -219,42 +129,14 @@ const Unidad2 = () => {
           <strong>Otro caso de dilema del prisionero</strong>
         </h4>
         <p className="mt-2">Cambiando un poco el juego pasado:</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">Callar</th>
-            <th className="border border-black p-3">Confesar</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Callar</th>
-            <td className="border border-black p-3">($1;0$)</td>
-            <td className="border border-black p-3">($-4;1$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Confesar</th>
-            <td className="border border-black p-3">($1;-4$)</td>
-            <td className="border border-black p-3">($-2;-2$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["Callar", "Confesar"]}
+          player2Strategies={["Callar", "Confesar"]}
+          payoffs={[
+            ["($1;0$)", "($-4;1$)"],
+            ["($1;-4$)", "($-2;-2$)"],
+          ]}
+        />
 
         <p className="mt-2">
           Veamos que pasa para el primer jugador. Si el jugador 2 escoge
@@ -262,48 +144,14 @@ const Unidad2 = () => {
           Mientras que si el jugador 2 escoge $Confesar$, el jugador 1 prefiere
           $Confesar$. Viendolo en la tabla:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">Callar</th>
-            <th className="border border-black p-3">Confesar</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Callar</th>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1};0$)"}
-            </td>
-            <td className="border border-black p-3">($-4;1$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Confesar</th>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1};-4$)"}
-            </td>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{-2};-2$)"}
-            </td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["Callar", "Confesar"]}
+          player2Strategies={["Callar", "Confesar"]}
+          payoffs={[
+            ["($\\textcolor{red}{1};0$)", "($-4;1$)"],
+            ["($\\textcolor{red}{1};-4$)", "($\\textcolor{red}{-2};-2$)"],
+          ]}
+        />
 
         <p className="mt-2">
           Por lo tanto, ahora la estrategia $Callar$ no es estrictamente
@@ -328,39 +176,14 @@ const Unidad2 = () => {
           juego reducido:
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">Confesar</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Callar</th>
-            <td className="border border-black p-3">($-4;1$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">Confesar</th>
-            <td className="border border-black p-3">($-2, -2 $)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["Callar", "Confesar"]}
+          player2Strategies={["Confesar"]}
+          payoffs={[
+            ["($-4;1$)"],
+            ["($-2, -2 $)"],
+          ]}
+        />
 
         <p className="mt-2">
           Ahora, al primer jugador tendrá que decidir entre $Callar$ o
@@ -369,32 +192,13 @@ const Unidad2 = () => {
           $Callar$, quedando el juego reducido:
         </p>
 
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="2">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="2">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">Confesar</th>
-          </tr>
-
-          <tr>
-            <th className="border border-black p-3">Confesar</th>
-            <td className="border border-black p-3">($-2, -2 $)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["Confesar"]}
+          player2Strategies={["Confesar"]}
+          payoffs={[
+            ["($-2, -2 $)"],
+          ]}
+        />
 
         <p>Llegamos al resultado donde ambos jugadores confesarán.</p>
 
@@ -434,174 +238,50 @@ const Unidad2 = () => {
           sea para realizar la actividad que prefiere el cónyuge.
         </p>
         <p className="mt-2">Representandolo en una tabla:</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">T</th>
-            <th className="border border-black p-3">C</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">T</th>
-            <td className="border border-black p-3">($3; 1$)</td>
-            <td className="border border-black p-3">($0; 0$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">C</th>
-            <td className="border border-black p-3">($0; 0$)</td>
-            <td className="border border-black p-3">($1; 3$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["T", "C"]}
+          player2Strategies={["T", "C"]}
+          payoffs={[
+            ["($3; 1$)", "($0; 0$)"],
+            ["($0; 0$)", "($1; 3$)"],
+          ]}
+        />
 
         <p className="mt-2">
           Vemos que escogería en primer jugador dada la elección del segundo.
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">T</th>
-            <th className="border border-black p-3">C</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">T</th>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{3}; 1$)"}
-            </td>
-            <td className="border border-black p-3">($0; 0$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">C</th>
-            <td className="border border-black p-3">($0; 0$)</td>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1}; 3$)"}
-            </td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["T", "C"]}
+          player2Strategies={["T", "C"]}
+          payoffs={[
+            ["($\\textcolor{red}{3}; 1$)", "($0; 0$)"],
+            ["($0; 0$)", "($\\textcolor{red}{1}; 3$)"],
+          ]}
+        />
 
         <p>
           Ahora vemos que decide que el segundo jugador dada la elección del
           primero.
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">T</th>
-            <th className="border border-black p-3">C</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">T</th>
-            <td className="border border-black p-3">
-              {"($3; \\textcolor{red}{1}$)"}
-            </td>
-            <td className="border border-black p-3">($0; 0$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">C</th>
-            <td className="border border-black p-3">($0; 0$)</td>
-            <td className="border border-black p-3">
-              {"($1; \\textcolor{red}{3}$)"}
-            </td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["T", "C"]}
+          player2Strategies={["T", "C"]}
+          payoffs={[
+            ["($3; \\textcolor{red}{1}$)", "($0; 0$)"],
+            ["($0; 0$)", "($1; \\textcolor{red}{3}$)"],
+          ]}
+        />
         <p className="mt-2">
           Uniendo ambas elecciones en una misma tabla tenemos:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">T</th>
-            <th className="border border-black p-3">C</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">T</th>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{3}; \\textcolor{red}{1}$)"}
-            </td>
-            <td className="border border-black p-3">($0; 0$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">C</th>
-            <td className="border border-black p-3">($0; 0$)</td>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1}; \\textcolor{red}{3}$)"}
-            </td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["T", "C"]}
+          player2Strategies={["T", "C"]}
+          payoffs={[
+            ["($\\textcolor{red}{3}; \\textcolor{red}{1}$)", "($0; 0$)"],
+            ["($0; 0$)", "($\\textcolor{red}{1}; \\textcolor{red}{3}$)"],
+          ]}
+        />
         <p className="mt-2">
           {
             "Por lo tanto, tenemos dos equilibrios de Nash en este juego: $EN = \\{(T; T), (C; C)\\}$. Dado que en estos puntos, ningún jugador tiene incentivos a desviarse."
@@ -622,42 +302,14 @@ const Unidad2 = () => {
           cruz, el jugador 2 gana 1 unidad y el jugador 1 pierde 1 unidad.
         </p>
         <p className="mt-2">Representandolo en una tabla:</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">A</th>
-            <th className="border border-black p-3">B</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">A</th>
-            <td className="border border-black p-3">($1; -1$)</td>
-            <td className="border border-black p-3">($-1; 1$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">B</th>
-            <td className="border border-black p-3">($-1; 1$)</td>
-            <td className="border border-black p-3">($1; -1$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["A", "B"]}
+          player2Strategies={["A", "B"]}
+          payoffs={[
+            ["($1; -1$)", "($-1; 1$)"],
+            ["($-1; 1$)", "($1; -1$)"],
+          ]}
+        />
         <p className="mt-2">
           Analizando las mejores respuestas de cada jugador, el jugador 1
           siempre prefiere elegir distinto que el jugador 2, y el jugador 2
@@ -665,50 +317,14 @@ const Unidad2 = () => {
           equilibrio de Nash en estrategias puras en este juego. Viendolo en la
           tabla:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">A</th>
-            <th className="border border-black p-3">B</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">A</th>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1}; -1$)"}
-            </td>
-            <td className="border border-black p-3">
-              {"$(-1; \\textcolor{red}{1})$"}
-            </td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">B</th>
-            <td className="border border-black p-3">
-              {"$(-1; \\textcolor{red}{1})$"}
-            </td>
-            <td className="border border-black p-3">
-              {"($\\textcolor{red}{1}; -1$)"}
-            </td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["A", "B"]}
+          player2Strategies={["A", "B"]}
+          payoffs={[
+            ["($\\textcolor{red}{1}; -1$)", "$(-1; \\textcolor{red}{1})$"],
+            ["$(-1; \\textcolor{red}{1})$", "($\\textcolor{red}{1}; -1$)"],
+          ]}
+        />
         <p>
           Por lo tanto, tenemos un juego que no tiene equilibrios de Nash en
           estrategias puras y tampoco se puede resolver con Estrategias
@@ -760,42 +376,14 @@ const Unidad2 = () => {
           Recordemos que no había equilibrio de Nash en estrategias puras en
           este juego. Y la tabla de pagos era:
         </p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">A</th>
-            <th className="border border-black p-3">B</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">A</th>
-            <td className="border border-black p-3">($1; -1$)</td>
-            <td className="border border-black p-3">($-1; 1$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">B</th>
-            <td className="border border-black p-3">($-1; 1$)</td>
-            <td className="border border-black p-3">($1; -1$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["A", "B"]}
+          player2Strategies={["A", "B"]}
+          payoffs={[
+            ["($1; -1$)", "($-1; 1$)"],
+            ["($-1; 1$)", "($1; -1$)"],
+          ]}
+        />
 
         <p>
           Para encontrar el equilibrio de Nash en estrategias mixtas, debemos
@@ -875,42 +463,14 @@ const Unidad2 = () => {
           <strong>Aplicación al juego de "guerra de los sexos"</strong>
         </h4>
         <p className="mt-2">El juego tiene la siguiente tabla</p>
-        <table className="mt-7 mb-7 border-collapse mx-auto text-center">
-          <thead><tr>
-            <th className="border border-black p-3"></th>
-            <th className="border border-black p-3" colSpan="3">
-              J2
-            </th>
-          </tr>
-          </thead>
-          <tbody><tr>
-            <th className="border border-black p-3" rowSpan="3">
-              <div className="flex flex-col items-center justify-center leading-none">
-                <span>J1</span>
-              </div>
-            </th>
-            <th className="border border-black p-3">Estrategias</th>
-            <th className="border border-black p-3">T</th>
-            <th className="border border-black p-3">C</th>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">T</th>
-            <td className="border border-black p-3">($3; 1$)</td>
-            <td className="border border-black p-3">($0; 0$)</td>
-          </tr>
-
-
-          <tr>
-            <th className="border border-black p-3">C</th>
-            <td className="border border-black p-3">($0; 0$)</td>
-            <td className="border border-black p-3">($1; 3$)</td>
-          </tr>
-
-          
-          </tbody>
-        </table>
+        <GameTable
+          player1Strategies={["T", "C"]}
+          player2Strategies={["T", "C"]}
+          payoffs={[
+            ["($3; 1$)", "($0; 0$)"],
+            ["($0; 0$)", "($1; 3$)"],
+          ]}
+        />
         <p className="mt-2">
           Siguiendo un procedimiento similar al del juego de combinación de
           centavos, podemos definir las estrategias mixtas para ambos jugadores.

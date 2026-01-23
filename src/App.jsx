@@ -10,6 +10,7 @@ import Router2 from "./components/Router2";
 import Bienvenida from "./pages/Bienvenida";
 import Introduccion from "./pages/Introduccion";
 import Unidad2 from "./pages/Unidad2/Teoria";
+import Unidad3 from "./pages/Unidad3/Teoria";
 
 // importar auth
 import { AuthProvider, AuthRoute } from "./auth/auth";
@@ -38,7 +39,16 @@ function App() {
               <Route path=":slug" element={<Router2 />} />
             </Route>
 
-            <Route />
+            <Route
+              path="/decisiones-bajo-incertidumbre"
+              element={
+                <AuthRoute>
+                  <Unidad3 />
+                </AuthRoute>
+              }
+            >
+              <Route path=":slug" element={<Router2 />} />
+            </Route>
 
             <Route path="/login" element={<LoginPage />} />
             <Route
