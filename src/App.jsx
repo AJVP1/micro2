@@ -5,6 +5,7 @@ import { MathJaxContext } from "better-react-mathjax";
 // importar componentes
 import Header from "./components/Header";
 import Router2 from "./components/Router2";
+import Router3 from "./components/Router3";
 
 // importar paginas
 import Bienvenida from "./pages/Bienvenida";
@@ -47,7 +48,7 @@ function App() {
                 </AuthRoute>
               }
             >
-              <Route path=":slug" element={<Router2 />} />
+              <Route path=":slug" element={<Router3 />} />
             </Route>
 
             <Route path="/login" element={<LoginPage />} />
