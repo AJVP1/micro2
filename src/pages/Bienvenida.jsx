@@ -8,7 +8,6 @@ const Bienvenida = () => {
   return (
     <section className="bg-[#fafafa] max-w-237 mx-auto p-6">
       <h1 className="text-4xl font-bold text-center mt-6">Microeconomía 2</h1>
-      <p className="text-center text-2xl italic">Daniel Aromi</p>
       <p className="mx-auto text-lg mt-10 text-justify">
         La materia estudia cómo interactúan los agentes económicos cuando
         existen interdependencias estratégicas, incertidumbre e información

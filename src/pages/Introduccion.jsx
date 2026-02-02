@@ -10,8 +10,15 @@ const Introduccion = () => {
         Material obligatorio:
       </h2>
       <ul className="list-disc text-lg mt-4 pl-8">
-        <li>Gibbons, "Game Theory for Applied Economists"</li>
-        <li>Mas-Colell, Whinston y Green, "Microeconomic Theory"</li>
+        <li className="mt-3">
+          Gibbons, "<em>Game Theory for Applied Economists</em>"
+        </li>
+        <li className="mt-3">
+          Mas-Colell, Whinston y Green, "<em>Microeconomic Theory</em>"
+        </li>
+        <li className="mt-3">
+          Varian, "<em>Intermediate Microeconomics</em>", fifth edition
+        </li>
       </ul>
 
       <h2 className="mt-6 text-[#1d2554] font-semibold">

@@ -291,7 +291,10 @@ const Unidad3 = () => {
         <h3 className="text-2xl font-semibold text-[#1d2554] mt-4">Contacto</h3>
         <p className="mt-2 mb-6">
           Para alguna modificación o sugerencia, por favor mandar mail a{" "}
-          <a href="mailto:armando.charal1998@gmail.com">
+          <a
+            href="mailto:armando.charal1998@gmail.com"
+            className=" text-[#1d2554] hover:text-[#374785] underline hover:no-underline"
+          >
             armando.charal1998@gmail.com
           </a>
           .

@@ -179,10 +179,7 @@ const Unidad2 = () => {
         <GameTable
           player1Strategies={["Callar", "Confesar"]}
           player2Strategies={["Confesar"]}
-          payoffs={[
-            ["($-4;1$)"],
-            ["($-2, -2 $)"],
-          ]}
+          payoffs={[["($-4;1$)"], ["($-2, -2 $)"]]}
         />
 
         <p className="mt-2">
@@ -195,9 +192,7 @@ const Unidad2 = () => {
         <GameTable
           player1Strategies={["Confesar"]}
           player2Strategies={["Confesar"]}
-          payoffs={[
-            ["($-2, -2 $)"],
-          ]}
+          payoffs={[["($-2, -2 $)"]]}
         />
 
         <p>Llegamos al resultado donde ambos jugadores confesarán.</p>
@@ -661,10 +656,12 @@ const Unidad2 = () => {
         <h3 className="text-2xl font-semibold text-[#1d2554] mt-4">Contacto</h3>
         <p className="mt-2 mb-6">
           Para alguna modificación o sugerencia, por favor mandar mail a{" "}
-          <a href="mailto:armando.charal1998@gmail.com">
+          <a
+            href="mailto:armando.charal1998@gmail.com"
+            className=" text-[#1d2554] hover:text-[#374785] underline hover:no-underline"
+          >
             armando.charal1998@gmail.com
           </a>
-          .
         </p>
       </section>
     </MathJax>
