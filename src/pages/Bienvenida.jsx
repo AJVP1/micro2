@@ -7,7 +7,7 @@ import modulos from "../data/modulos.json";
 const Bienvenida = () => {
   return (
     <section className="bg-[#fafafa] max-w-237 mx-auto p-4 md:p-6">
-      <h1 className="text-2xl md:text-4xl font-bold text-center mt-6">
+      <h1 className="text-2xl md:text-4xl font-bold text-[#1d2554] text-center mt-6">
         Microeconomía 2
       </h1>
       <p className="mx-auto text-sm md:text-lg mt-10 text-left md:text-justify">
