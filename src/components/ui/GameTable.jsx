@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-const cellStyles = "border border-black p-3";
+const cellStyles = "border border-black p-1.5 sm:p-2 md:p-3 text-xs sm:text-sm md:text-base";
 
 const GameTable = memo(function GameTable({
   player1Label = "J1",
