@@ -25,11 +25,21 @@ const Introduccion = () => {
         Problemas a tratar durante la materia:
       </h2>
       <ul className="list-disc text-sm md:text-base lg:text-lg mt-3 md:mt-4 pl-6 md:pl-8">
-        <li>Problema de la credibilidad</li>
-        <li>Problema de las profesias autocumplidas</li>
-        <li>Problema de equilibrios multiples</li>
-        <li>Problemas de cooperación/colusión implícita</li>
-        <li>Problema de la confianza/colapso del mercado</li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Problema de la credibilidad
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Problema de las profesias autocumplidas
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Problema de equilibrios multiples
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Problemas de cooperación/colusión implícita
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Problema de la confianza/colapso del mercado
+        </li>
       </ul>
 
       <h2 className="text-base md:text-lg lg:text-xl mt-4 md:mt-6 text-[#1d2554] font-semibold">

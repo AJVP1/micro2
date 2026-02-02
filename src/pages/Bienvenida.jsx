@@ -10,7 +10,7 @@ const Bienvenida = () => {
       <h1 className="text-2xl md:text-4xl font-bold text-[#1d2554] text-center mt-6">
         Microeconomía 2
       </h1>
-      <p className="mx-auto text-sm md:text-lg mt-10 text-left md:text-justify">
+      <p className="mx-auto text-sm sm:text-base md:text-lg mt-10 text-left md:text-justify">
         La materia estudia cómo interactúan los agentes económicos cuando
         existen interdependencias estratégicas, incertidumbre e información
         imperfecta. Su eje central es la teoría de juegos, aplicada a problemas

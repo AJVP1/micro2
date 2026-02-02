@@ -4,8 +4,8 @@ import GameTable from "../../components/ui/GameTable";
 function Ejercicio7() {
   return (
     <ExerciseLayout number={7}>
-      <h3 className="text-2xl font-semibold mt-4">Enunciado</h3>
-      <p className="mt-2">
+      <h3 className="text-xl sm:text-2xl font-semibold mt-6">Enunciado</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
         Paul y John son dos habitantes de la ciudad de Buenos Aires. Ambos
         tienen la misma función de utilidad, $u(x) = \ln (x)$. La probabilidad
         de tener un accidente de transito en dicha ciudad es de $0,3$. El
@@ -17,8 +17,8 @@ function Ejercicio7() {
         riqueza de ambos en partes iguales. ¿Se llevará a cabo este plan?
       </p>
 
-      <h3 className="text-2xl font-semibold mt-4">Solución</h3>
-      <p className="mt-2">
+      <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
         Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
         estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
         quedaría:

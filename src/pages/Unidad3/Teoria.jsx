@@ -18,22 +18,22 @@ const Unidad3 = () => {
           <strong>Elementos</strong>
         </h4>
         <ul className="list-disc text-lg mt-4 pl-8">
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             {
               "Resultados: conjunto de posibles resultados $C= (\\:c_1;\\: c_2; \\:...;\\: c_n)$."
             }
           </li>
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             {
               "Loteria: probabilidad de ocurrencia asignada a cada resultado $\\ell= (\\:p_1;\\: p_2; \\:...;\\: p_n)$ con $0 \\leq p_i \\leq 1$ y $\\sum_{i=1}^n p_i = 1$."
             }
           </li>
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             {
               "Preferencias: definidas sobre loterías $L = (\\: \\ell_1;\\: \\ell_2; \\:...;\\: \\ell_m)$, esto es, relación entre loterías tal que existen relaciones de preferencias entre estas."
             }
           </li>
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             {
               "Utilidad: funciones de utilidad que dependen de los resultados, y devuelven la utilidad los mismos resultados."
             }
@@ -43,7 +43,7 @@ const Unidad3 = () => {
         <h4 className="mt-4">
           <strong>Axioma de completitud</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Para cualesquiera dos loterías $\\ell_1$ y $\\ell_2$, se cumple que: $\\ell_1 \\succeq \\ell_2$ o $\\ell_2 \\succeq \\ell_1$ (o ambas)."
           }
@@ -52,7 +52,7 @@ const Unidad3 = () => {
         <h4 className="mt-4">
           <strong>Axioma de transitividad</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Para cualesquiera tres loterías $\\ell_1$, $\\ell_2$ y $\\ell_3$, se cumple que: si $\\ell_1 \\succeq \\ell_2$ y $\\ell_2 \\succeq \\ell_3$, entonces $\\ell_1 \\succeq \\ell_3$."
           }
@@ -61,7 +61,7 @@ const Unidad3 = () => {
         <h4 className="mt-4">
           <strong>Axioma de continuidad</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Para cualesquiera tres loterías $\\ell_1$, $\\ell_2$ y $\\ell_3$, con $\\ell_1 \\succeq \\ell_2 \\succeq \\ell_3$, existe un $\\alpha \\in (0,1)$ tal que: $\\ell_2 \\sim \\alpha \\ell_1 + (1-\\alpha) \\ell_3$."
           }
@@ -70,12 +70,12 @@ const Unidad3 = () => {
         <h4 className="mt-4">
           <strong>Axioma de independencia</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Si $\\ell_1 \\succeq \\ell_2$, entonces para cualquier lotería $\\ell$ y cualquier $\\alpha \\in (0,1)$, se cumple que:."
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "$$\\ell_1 \\succeq \\ell_2 \\implies \\alpha \\ell_1 \\succeq \\alpha \\ell_2 \\implies \\alpha \\ell_1 + (1-\\alpha) \\ell_2 \\succeq \\alpha \\ell_2 + (1-\\alpha) \\ell_2$$"
           }
@@ -84,49 +84,59 @@ const Unidad3 = () => {
         <h4 className="mt-4">
           <strong>Teorema de la Utilidad Esperada</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Si las preferencias sobre loterías cumplen los axiomas de completitud, transitividad, continuidad e independencia, entonces existe una función de utilidad $u(c)$ definida sobre los resultados tal que las preferencias sobre loterías pueden ser representadas por la utilidad esperada."
           }
         </p>
-        <p className="mt-2">{"$$u^e(\\ell) = \\sum_{i=1}^n p_i u(c_i)$$"}</p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$u^e(\\ell) = \\sum_{i=1}^n p_i u(c_i)$$"}
+        </p>
 
         <h4 className="mt-4">
           <strong>Definición de aversión al riesgo</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Un agente es averso al riesgo si prefiere la utilidad esperada de una
           lotería segura a la utilidad esperada de una lotería riesgosa con el
           mismo valor esperado.
         </p>
-        <p className="mt-2">{"$$ u(f(x)) \\ge u(E[x]) $$"}</p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$ u(f(x)) \\ge u(E[x]) $$"}
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           De forma análoga, un agente es amante del riesgo si prefiere la
           utilidad esperada de una lotería riesgosa a la utilidad esperada de
           una lotería segura con el mismo valor esperado.
         </p>
-        <p className="mt-2">{"$$ u(f(x)) \\le u(E[x]) $$"}</p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$ u(f(x)) \\le u(E[x]) $$"}
+        </p>
 
         <h4 className="mt-4">
           <strong>Monto equivalente cierto</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Dadas la lotería $f(x)$ y las utilidades $u(x)$, el valor de monto equivalente cierto $\\hat x$ es aquel que deja indiferente al individuo entre la lotería y el pago cierto."
           }
         </p>
-        <p className="mt-2">{"$$u(f(\\hat{x})) = u(E[\\hat{x}])$$"}</p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$u(f(\\hat{x})) = u(E[\\hat{x}])$$"}
+        </p>
 
         <h4 className="mt-4">
           <strong>Coeficiente de Arrow-Pratt</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "El coeficiente de aversión al riesgo de Arrow-Pratt mide la aversión al riesgo de un individuo en un punto específico de su función de utilidad. Se define como:"
           }
         </p>
-        <p className="mt-2">{"$$ A(x) = -\\frac{u''(x)}{u'(x)} $$"}</p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$ A(x) = -\\frac{u''(x)}{u'(x)} $$"}
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Donde $u'(x)$ es la primera derivada de la función de utilidad y $u''(x)$ es la segunda derivada. Un valor positivo de $A(x)$ indica aversión al riesgo, un valor negativo indica amor al riesgo, y un valor de cero indica neutralidad al riesgo."
           }
@@ -135,53 +145,53 @@ const Unidad3 = () => {
         <h4 className="mt-4">
           <strong>Ejemplo de compra de un seguro</strong>
         </h4>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Sea un individuo con riqueza inicial $w_0$ que enfrenta una posible pérdida $l$ con probabilidad $p$. El individuo puede comprar un seguro que cubre la pérdida a un costo $c$. La utilidad esperada sin seguro es:"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {"$$ U_{sin\\ seguro} = p \\cdot u(w_0 - l) + (1-p)\\cdot u(w_0) $$"}
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Ahora supongamos el agente puede elegir cuantas cantidades asegurar, sean $q$ las cantidades aseguradas. Y sea $e$ el costo por unidad asegurada. Entonces la utilidad esperada con el seguro es:"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "$$ U_{con\\ seguro} = p \\cdot u(w_0 - e \\cdot q + q - l) + (1-p) \\cdot u(w_0 - e \\cdot q) $$"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "El agente elegirá la cantidad asegurada $q$ que maximice su utilidad esperada. Haciendo condiciones de primer orden:"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "$$ \\frac{\\partial U_{con\\ seguro}}{\\partial q} =  0 \\implies p \\cdot (1-e) \\cdot u'(w_0 - e \\cdot q + q - l) + (1-p) \\cdot (-e) \\cdot u'(w_0 - e \\cdot q) = 0 $$"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "$$ p \\cdot (1-e) \\cdot u'(w_0 - e \\cdot q + q - l) = (1-p) \\cdot e \\cdot u'(w_0 - e \\cdot q)$$"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "$$ \\frac{p}{(1-p)} \\cdot \\frac{u'(w_0 - e \\cdot q + q - l)}{u'(w_0 - e \\cdot q)}   = \\frac{e}{(1-e)} $$"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Implícitamente tenemos las cantidades de equilibrio tal que el individuo maximiza la utilidad esperada. Viendo que pasa cuando $p = e$, es decir, cuando se iguala la probabilidad de ocurrir el siniestro y el costo por unidad:"
           }
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {"$$ u'(w_0 - e \\cdot q + q - l) =  u'(w_0 - e \\cdot q) $$"}
         </p>
-        <p className="mt-2">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Este es el caso de un seguro actuarialmente justo, lo que paga el
           seguro se iguala en promedio a lo que pierde el cliente. En este
           escenario, al cliente le conviene asegurar todas las cantidades dado
@@ -193,23 +203,23 @@ const Unidad3 = () => {
           <strong>Que vimos?</strong>
         </h4>
         <ul className="list-disc list-inside mt-2">
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             Un juego consiste de tres elementos: jugadores, estrategias y pagos.
           </li>
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             Definición de Estrategias Estrictamente Dominantes (EED) y cómo
             aplicarlas para simplificar el análisis de un juego.
           </li>
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             Equilibrio de Nash en estrategias puras y cómo identificarlo en una
             matriz de pagos.
           </li>
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             Proceso: Buscar mejores respuestas para cada jugador. Estas nos
             pueden dar un indicio de cuales son EED. Verificar EED. Buscar
             equilibrios donde las mejores respuestas coincidan.
           </li>
-          <li>
+          <li className="mt-2 text-sm sm:text-base md:text-lg">
             Estrategias mixtas y cómo encontrar equilibrios de Nash en
             estrategias mixtas.
           </li>

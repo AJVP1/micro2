@@ -4,8 +4,8 @@ import GameTable from "../../components/ui/GameTable";
 function Ejercicio5() {
   return (
     <ExerciseLayout number={5}>
-      <h3 className="text-2xl font-semibold mt-4">Enunciado</h3>
-      <p className="mt-2">
+      <h3 className="text-xl sm:text-2xl font-semibold mt-6">Enunciado</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
         Juan quiere comprar un flat-TV, para lo cual lleva varios años ahorrando
         plata. Salió un nuevo modelo, llamado Flat-Flat, que no es tan delgado
         como los otros, pero es mucho más barato. Él está dispuesto a pagar
@@ -20,8 +20,8 @@ function Ejercicio5() {
         esperados. ¿Le parece esta conclusión verdadera o falsa? ¿Por qué?
       </p>
 
-      <h3 className="text-2xl font-semibold mt-4">Solución</h3>
-      <p className="mt-2">
+      <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
         Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
         estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
         quedaría:

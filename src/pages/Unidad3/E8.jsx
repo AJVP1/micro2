@@ -4,8 +4,8 @@ import GameTable from "../../components/ui/GameTable";
 function Ejercicio8() {
   return (
     <ExerciseLayout number={8}>
-      <h3 className="text-2xl font-semibold mt-4">Enunciado</h3>
-      <p className="mt-2">
+      <h3 className="text-xl sm:text-2xl font-semibold mt-6">Enunciado</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
         Preocupados por la serie de lesiones que afectan al plantel de
         Independiente, Hilario y Fabian, dos arqueros deciden colaborar entre
         sí. La probabilidad de lesionarse es $0,5$ para cada uno. En el caso de
@@ -21,8 +21,8 @@ function Ejercicio8() {
         = \ln (x)$.
       </p>
 
-      <h3 className="text-2xl font-semibold mt-4">Solución</h3>
-      <p className="mt-2">
+      <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
         Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
         estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
         quedaría:
