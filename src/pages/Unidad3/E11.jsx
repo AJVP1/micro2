@@ -22,18 +22,33 @@ function Ejercicio11() {
 
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
-        estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
-        quedaría:
+        Si escoge la acción $A$, su utilidad esperada es:
       </p>
-      <GameTable
-        player1Strategies={["Cara", "Ceca"]}
-        player2Strategies={["Acertó", "No Acertó"]}
-        payoffs={[
-          ["($1;-1$)", "($0;0$)"],
-          ["($1;-1$)", "($0;0$)"],
-        ]}
-      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(x)] = 0,5 \cdot \ln(140) + 0,5 \cdot \ln(10) \approx 3,62$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Si escoge la acción $B$, su utilidad esperada es:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(x)] = 0,5 \cdot \ln(50) + 0,5 \cdot \ln(30) \approx 3,65$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Por lo tanto, el individuo elegiría la acción $B$.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Si el individuo pudiese elegir mitad de cada uno, entonces su utilidad
+        esperada sería:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(x)] = 0,5 \cdot \ln(70+25=95) + 0,5 \cdot \ln(5+15=20) \approx
+        3,77$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Por lo tanto, el individuo elegiría mitad de cada uno, ya que su
+        utilidad esperada es mayor que la utilidad esperada de elegir solo una
+        de las acciones.
+      </p>
     </ExerciseLayout>
   );
 }

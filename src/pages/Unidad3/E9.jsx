@@ -14,18 +14,22 @@ function Ejercicio9() {
 
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
-        estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
-        quedaría:
+        La utilidad esperada de la lotería es:
       </p>
-      <GameTable
-        player1Strategies={["Cara", "Ceca"]}
-        player2Strategies={["Acertó", "No Acertó"]}
-        payoffs={[
-          ["($1;-1$)", "($0;0$)"],
-          ["($1;-1$)", "($0;0$)"],
-        ]}
-      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(c)] = 0,1 \cdot 2 \cdot 50 + 0,9 \cdot 2 \cdot 10 = 10 + 18 = 28$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Para encontrar el precio mínimo que Charly aceptaría por su billete de
+        lotería, tenemos que encontrar el monto $x$ tal que $u(x) = E[u(c)]$.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">$$2x = 28$$</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">$$x = 14$$</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Por lo tanto, deberíamos pagarle a Charly al menos $14$ para que esté
+        dispuesto a vendernos el billete, ya que este es el valor que iguala su
+        utilidad esperada con la utilidad segura de recibir $x$.
+      </p>
     </ExerciseLayout>
   );
 }

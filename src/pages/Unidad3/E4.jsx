@@ -42,19 +42,22 @@ function Ejercicio4() {
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 2.</p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Si no paga el seguro obtendría una utilidad esperada de
+        Si no deja que el estudio se lleve las ganancias, entonces Juan tendría
+        una utilidad:
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
         $$E(u(x)) = 0,5 \cdot \ln(10.000) + 0,5 \cdot \ln(15.000) \approx 9,06$$
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Si paga el seguro obtendría una utilidad esperada de
+        Si recibe el monto de $5.000$ y deja que el estudio se lleve las
+        ganancias, entonces Juan tendría una utilidad:
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        $$E(u(x)) = \ln(5.000) \approx 8,51$$
+        $$E(u(x)) = \ln(10.000) \approx 9,21$$
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Por lo tanto, Juan no estaría dispuesto a pagar la prima justa.
+        Por lo tanto, Juan aceptaría recibir $5.000$ y dejar que el estudio se
+        lleve las ganancias.
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 3.</p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">

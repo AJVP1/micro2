@@ -19,18 +19,78 @@ function Ejercicio7() {
 
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
-        estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
-        quedaría:
+        En este ejericio, Paul y John tienen que comparar la utilidad esperada
+        de llevar a cabo el plan, contra la utilidad esperada de no llevar a
+        cabo el plan.
       </p>
-      <GameTable
-        player1Strategies={["Cara", "Ceca"]}
-        player2Strategies={["Acertó", "No Acertó"]}
-        payoffs={[
-          ["($1;-1$)", "($0;0$)"],
-          ["($1;-1$)", "($0;0$)"],
-        ]}
-      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        La utilidad esperada de Paul sin el plan es:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(x)] = 0,3 \cdot \ln(2.000) + 0,7 \cdot \ln(10.000) \approx 8,72$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        La utilidad esperada de John sin el plan es:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(x)] = 0,3 \cdot \ln(5.000) + 0,7 \cdot \ln(20.000) \approx 9,48$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Ahora tenemos que calcular las probabilidades de cada escenario con el
+        plan.
+      </p>
+      <ul className="list-disc list-inside mt-2">
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Ninguno tiene un accidente: $0,7 \cdot 0,7 = 0,49$.
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Solo Paul tiene un accidente: $0,3 \cdot 0,7 = 0,21$.
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Solo John tiene un accidente: $0,7 \cdot 0,3 = 0,21$.
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Ambos tienen un accidente: $0,3 \cdot 0,3 = 0,09$.
+        </li>
+      </ul>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Y las riquezas en cada estado son:
+      </p>
+      <ul className="list-disc list-inside mt-2">
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Ninguno tiene un accidente: Paul $10.000$ y John $20.000$.
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Solo Paul tiene un accidente: cada uno obtiene $(2.000 + 20.000) / 2 =
+          11.000$.
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Solo John tiene un accidente: cada uno obtiene $(10.000 + 5.000) / 2 =
+          7.500$.
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          Ambos tienen un accidente: Paul $2.000$ y John $5.000$.
+        </li>
+      </ul>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        La utilidad esperada de Paul con el plan es:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(x)] = 0,49 \cdot \ln(10.000) + 0,21 \cdot \ln(11.000) + 0,21 \cdot
+        \ln(7.500) + 0,09 \cdot \ln(2.000) \approx 9,02$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        La utilidad esperada de John con el plan es:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E[u(x)] = 0,49 \cdot \ln(20.000) + 0,21 \cdot \ln(11.000) + 0,21 \cdot
+        \ln(7.500) + 0,09 \cdot \ln(5.000) \approx 9,44$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {
+          "  Ahora comparamos las utilidades esperadas de cada uno con el plan, contra las utilidades esperadas de cada uno sin el plan. Para Paul, $9,02 > 8,72$, por lo tanto, le conviene llevar a cabo el plan. Para John, $9,44 < 9,48$, por lo tanto, no le conviene llevar a cabo el plan. Dado que a John no le conviene llevar a cabo el plan, entonces el plan no se llevará a cabo."
+        }
+      </p>
     </ExerciseLayout>
   );
 }

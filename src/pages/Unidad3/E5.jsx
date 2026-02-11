@@ -22,18 +22,11 @@ function Ejercicio5() {
 
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
-        estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
-        quedaría:
+        Juan tendrá que comparar la utilidad esperada en el caso en que compre
+        el televisor, contra el caso en donde no compra el televisor. Va a
+        comprar el televisor en función de que tan averso al riesgo sea, es
+        decir, en función de su función de utilidad.
       </p>
-      <GameTable
-        player1Strategies={["Cara", "Ceca"]}
-        player2Strategies={["Acertó", "No Acertó"]}
-        payoffs={[
-          ["($1;-1$)", "($0;0$)"],
-          ["($1;-1$)", "($0;0$)"],
-        ]}
-      />
     </ExerciseLayout>
   );
 }

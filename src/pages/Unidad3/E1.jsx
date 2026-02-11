@@ -35,13 +35,13 @@ function Ejercicio1() {
         La utilidad esperada es:
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        $$E[U(x)] = 0,6 \cdot \ln(10.000) + 0,4 \cdot \ln(2.000) \approx 8,517$$
+        $$E[U(x)] = 0,6 \cdot \ln(10.000) + 0,4 \cdot \ln(2.000) \approx 8,566$$
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
         La renta equivalente cierta es el monto $x$ tal que $U(x) = E[U(x)]$:
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        {"$$\\ln(x) = 8,517 \\implies x = e^{8,517} \\approx 5.218$$"}
+        {"$$\\ln(x) = 8,566 \\implies x = e^{8,566} \\approx 5.260$$"}
       </p>
 
       <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 2.</p>

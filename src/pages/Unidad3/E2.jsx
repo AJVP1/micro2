@@ -46,13 +46,14 @@ function Ejercicio2() {
         {"$$\\sqrt{x} = 30 \\implies x = 30^2 = 900$$"}
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Por lo tanto, el precio mínimo que Juan aceptaría por su billete de
-        lotería es $900$. Si le ofrecen menos de $900$, entonces no le conviene
+        Dado que Juan recibe $400$ independientemente de la loteria, entonces el
+        monto mínimo que Juan aceptaría por el billete de la lotería es
+        $900-400=500$. Si le ofrecen menos de $500$, entonces no le conviene
         vender el billete, porque prefiere quedarse con el billete y jugar la
         lotería, que le da una utilidad esperada de $30$, a vender el billete
-        por un monto menor a $900$, que le daría una utilidad menor a $30$.
+        por un monto menor a $500$, que le daría una utilidad menor a $30$.
         Podemos verificar esto último calculando la utilidad de vender el
-        billete por un monto menor a $900$, por ejemplo, $800$:
+        billete por un monto menor a $500$, por ejemplo, $400$:
       </p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
         {"$$v(800) = \\sqrt{800} \\approx 28,28 < 30$$"}
