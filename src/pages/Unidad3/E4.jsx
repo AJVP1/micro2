@@ -25,22 +25,55 @@ function Ejercicio4() {
           ¿Estaría Juan dispuesto a aceptar un monto de $5.000$ pesos y dejar
           que el estudio se lleve las ganancias del juicio? Justifique
         </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          ¿A partir de cual monto Juan estaría dispuesto a dejar que el estudio
+          se lleve las ganancias?
+        </li>
       </ol>
 
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 1.</p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
-        estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
-        quedaría:
+        La prima justa es igual al producto entre el monto que paga el siniestro
+        y la probabilidad de que ocurra el escenario malo
       </p>
-      <GameTable
-        player1Strategies={["Cara", "Ceca"]}
-        player2Strategies={["Acertó", "No Acertó"]}
-        payoffs={[
-          ["($1;-1$)", "($0;0$)"],
-          ["($1;-1$)", "($0;0$)"],
-        ]}
-      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$P = 0,5 \cdot 10.000 = 5.000$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 2.</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Si no paga el seguro obtendría una utilidad esperada de
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E(u(x)) = 0,5 \cdot \ln(10.000) + 0,5 \cdot \ln(15.000) \approx 9,06$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Si paga el seguro obtendría una utilidad esperada de
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$E(u(x)) = \ln(5.000) \approx 8,51$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Por lo tanto, Juan no estaría dispuesto a pagar la prima justa.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 3.</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Para que Juan esté dispuesto a dejar que el estudio se lleve las
+        ganancias del juicio, la utilidad esperada de pagar la prima debe ser
+        mayor o igual a la utilidad esperada de no pagar el seguro, es decir:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        $$\ln(5.000 + P) \ge 9,06$$
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {"$$5.000 + P \\ge e^{9,06}$$"}
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">$$P \ge 3.604$$</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Resolviendo para $P$ obtenemos que Juan estaría dispuesto a que el
+        estudio se lleve las ganancias si el monto que le pagan es mayor o igual
+        a $3.604$.
+      </p>
     </ExerciseLayout>
   );
 }

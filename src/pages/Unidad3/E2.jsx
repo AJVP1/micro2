@@ -12,19 +12,51 @@ function Ejercicio2() {
       </p>
 
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Datos:</p>
+      <ul className="list-disc list-inside mt-2">
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          $c_0 = 400$ (consumo inicial de Juan)
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          $c_1 = 400 + 1.200 = 1.600$ (consumo de Juan si gana la lotería)
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          $p = 0,5$ (probabilidad de ganar la lotería)
+        </li>
+        <li className="mt-2 text-sm sm:text-base md:text-lg">
+          {"La función de Bernoulli de Juan es $v(c) = \\sqrt{c}$."}
+        </li>
+      </ul>
+
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        Sí, porque tiene jugadores (el jugador 1 y el jugador 2), tiene
-        estrategias (cara o ceca), y tiene pagos ($1$ y $0$). De forma matricial
-        quedaría:
+        El valor esperado de la lotería es:
       </p>
-      <GameTable
-        player1Strategies={["Cara", "Ceca"]}
-        player2Strategies={["Acertó", "No Acertó"]}
-        payoffs={[
-          ["($1;-1$)", "($0;0$)"],
-          ["($1;-1$)", "($0;0$)"],
-        ]}
-      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {
+          "$$E[v(c)] = 0,5 \\cdot \\sqrt{400} + 0,5 \\cdot \\sqrt{1.600} = 10 + 20 = 30$$"
+        }
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El monto que deja indiferente entre jugar la lotería o no es la renta
+        equivalente cierta, es decir, el monto tal que le de la misma utilidad
+        que la utilidad esperada, pero con un 100% de probabilidad. Es decir, el
+        monto $x$ tal que $v(x) = E[v(c)]$:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {"$$\\sqrt{x} = 30 \\implies x = 30^2 = 900$$"}
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Por lo tanto, el precio mínimo que Juan aceptaría por su billete de
+        lotería es $900$. Si le ofrecen menos de $900$, entonces no le conviene
+        vender el billete, porque prefiere quedarse con el billete y jugar la
+        lotería, que le da una utilidad esperada de $30$, a vender el billete
+        por un monto menor a $900$, que le daría una utilidad menor a $30$.
+        Podemos verificar esto último calculando la utilidad de vender el
+        billete por un monto menor a $900$, por ejemplo, $800$:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {"$$v(800) = \\sqrt{800} \\approx 28,28 < 30$$"}
+      </p>
     </ExerciseLayout>
   );
 }
