@@ -421,9 +421,10 @@ const Unidad2 = () => {
           Entonces, la utilidad esperada del jugador 1 es:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "$$E[u_1(p, q)] = p \\cdot (2q - 1) + (1-p) \\cdot (1 - 2q) = (4q - 2)p + (1 - 2q)$$"
-          }
+          {"$$E[u_1(p, q)] = p \\cdot (2q - 1) + (1-p) \\cdot (1 - 2q)$$"}
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$= (4q - 2)p + (1 - 2q)$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           De manera similar, podemos escribir la utilidad esperada del jugador 2
@@ -445,9 +446,10 @@ const Unidad2 = () => {
           Entonces, la utilidad esperada del jugador 2 es:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "$$E[u_2(p, q)] = q \\cdot (1 - 2p) + (1-q) \\cdot (2p - 1) = (4p - 2)q + (1 - 2p)$$"
-          }
+          {"$$E[u_2(p, q)] = q \\cdot (1 - 2p) + (1-q) \\cdot (2p - 1)$$"}
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$= (4p - 2)q + (1 - 2p)$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           Para encontrar el equilibrio de Nash, debemos encontrar las
@@ -514,9 +516,10 @@ const Unidad2 = () => {
           Entonces, la utilidad esperada del jugador 1 es:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "$$E[u_1(p, q)] = p \\cdot 3q + (1-p) \\cdot (1 - q) = (4q - 1)p + (1 - q)$$"
-          }
+          {"$$E[u_1(p, q)] = p \\cdot 3q + (1-p) \\cdot (1 - q)$$"}
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$= (4q - 1)p + (1 - q)$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           De manera similar, la utilidad esperada del jugador 2 es:
@@ -539,9 +542,10 @@ const Unidad2 = () => {
           Entonces, la utilidad esperada del jugador 2 es:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "$$E[u_2(p, q)] = q \\cdot p + (1-q) \\cdot 3(1 - p) = (4p - 3)q + 3(1 - p)$$"
-          }
+          {"$$E[u_2(p, q)] = q \\cdot p + (1-q) \\cdot 3(1 - p)$$"}
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {"$$ = (4p - 3)q + 3(1 - p)$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           Para encontrar el equilibrio de Nash, debemos encontrar las
