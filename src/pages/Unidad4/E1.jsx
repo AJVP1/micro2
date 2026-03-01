@@ -34,7 +34,67 @@ function Ejercicio1() {
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 1.</p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        La esperanza del pago es:
+        El juego en forma extensiva se puede representar con el siguiente árbol
+        de decisiones:
+      </p>
+      <img
+        className="w-150 rounded mx-auto block mt-4"
+        src="/src/assets/ej1-multiples.png"
+        alt="Árbol de decisiones para el juego del ladrón y el policía"
+      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 2.</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Eligiendo las mejores respuestas. En la última etapa el policía va a
+        ofrecer un $a_1 = 0$ tal que el ladrón este indiferente entre $Aceptar$
+        o $No Aceptar$. En la etapa anterior el policía va a decidir ser
+        corrupto y decidir ofrecer $a_1 = 0$. En la etapa anterior el ladrón va
+        a estar indiferente entre $Robar$ y $No Robar$. Llegamos a dos
+        equilibrios.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El primer equilibrio de Nash perfecto en subjuegos es:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {
+          "$$ ENPS = \\begin{cases} s_1 = \\{R, \\; A \\}, \\\\ s_2= \\{a_1 = 0 \\}  \\end{cases} $$"
+        }
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El segundo equilibrio de Nash perfecto en subjuegos es:
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {
+          "$$ ENPS = \\begin{cases} s_1 = \\{NR, \\; A \\}, \\\\ s_2= \\{a_1 = 0 \\}  \\end{cases} $$"
+        }
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 3.</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El juego en forma extensiva se puede representar con el siguiente árbol
+        de decisiones:
+      </p>
+      <img
+        className="w-150 rounded mx-auto block mt-4"
+        src="/src/assets/ej1-multiples-2.png"
+        alt="Árbol de decisiones para el juego del ladrón y el policía"
+      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El jugador $1$ decidirá elegir un $a_1 = 0$ tal que el jugador dos este
+        indiferente entre elegir $Aceptar$ o $No aceptar$. El jugador $2$
+        decidirá hacer la denuncia dado que si no la hace estaría peor. Y el
+        jugador $1$ decidirá $Robar$ el banco.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El equilibrio de Nash perfecto en subjuegos es
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {
+          "$$ ENPS = \\begin{cases} s_1 = \\{R, \\; a_1 = 0 \\}, \\\\ s_2= \\{ D, A \\}  \\end{cases} $$"
+        }
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 4.</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El ladrón preferiría jugar el segundo juego, ya que se lleva todo el
+        botín.
       </p>
     </ExerciseLayout>
   );

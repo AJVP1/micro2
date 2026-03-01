@@ -1,9 +1,9 @@
 import ExerciseLayout from "../../components/layout/ExerciseLayout";
 import GameTable from "../../components/ui/GameTable";
 
-function Ejercicio1() {
+function Ejercicio4() {
   return (
-    <ExerciseLayout number={1}>
+    <ExerciseLayout number={4}>
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Enunciado</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
         Silencio canibalístico. En una tribu de una pequeña y desconocida isla
@@ -43,10 +43,49 @@ function Ejercicio1() {
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 1.</p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        La esperanza del pago es:
+        Escribiendo el juego en forma extensiva
+      </p>
+      <img
+        className="w-150 rounded mx-auto block mt-4"
+        src="/src/assets/ej4-multiples.png"
+        alt="Árbol de decisiones para el juego los canibales"
+      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Si un jugador come recibe el pago de $a$, si es comido recibe el $0$, y
+        si pasa hambre recibe el pago de $b$ tal que $a &gt; b$.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Posibles elecciones de cada canibal: Comer y no ser comido (mejor
+        resultado), no comer y pasar hambre (segundo mejor resultado), comer y
+        ser comido (peor resultado).
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Si quedaran 2 caníbales, el primero que coma se vuelve el nuevo
+        prisionero y el otro lo comerá. Comer implica terminar siendo comido
+        (peor que quedarse hambriento). Entonces con 2, nadie come.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Con 3 caníbales, El primero que coma deja un juego pasa a ser el nuevo
+        prisionero con 2 caníbales, donde nadie comerá. Por lo tanto, quien coma
+        con 3 sí sobrevive. Entonces con 3, el primero sí come.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Con 4 caníbales, Si el primero come, deja un juego con 3, donde el
+        primero del nuevo ciclo sí comerá. Eso implica que quien comió
+        inicialmente terminará siendo comido. Entonces con 4, nadie come.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        Se observa el patrón: Número impar de caníbales, el primero come. Número
+        par de caníbales, nadie come. Entonces con 10 caníbales, nadie come y el
+        prisionero se va a su casa.
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 2.</p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El jefe caníbal invita a un número impar de vecinos, asegurándose así de
+        ser el primero en comer y sobrevivir al festín.
       </p>
     </ExerciseLayout>
   );
 }
 
-export default Ejercicio1;
+export default Ejercicio4;

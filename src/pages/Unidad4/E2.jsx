@@ -1,9 +1,9 @@
 import ExerciseLayout from "../../components/layout/ExerciseLayout";
 import GameTable from "../../components/ui/GameTable";
 
-function Ejercicio1() {
+function Ejercicio2() {
   return (
-    <ExerciseLayout number={1}>
+    <ExerciseLayout number={2}>
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Enunciado</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
         Liderazgo Stackelberg. Un líder de Stackelberg es un jugador que puede
@@ -40,10 +40,35 @@ function Ejercicio1() {
       <h3 className="text-xl sm:text-2xl font-semibold mt-6">Solución</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 1.</p>
       <p className="mt-2 text-sm sm:text-base md:text-lg">
-        La esperanza del pago es:
+        El juego en forma extensiva se puede representar con el siguiente árbol
+        de decisiones:
       </p>
+      <img
+        className="w-150 rounded mx-auto block mt-4"
+        src="/src/assets/ej2-multiples.png"
+        alt="Árbol de decisiones para el juego del ladrón y el policía"
+      />
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        El equilibrio perfecto en subjuegos es
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        {
+          "$$ ENPS = \\begin{cases} s_1 = \\{ S2 \\}, \\\\ s_2= \\{t_1, t_2 \\}  \\end{cases} $$"
+        }
+      </p>
+      <p className="mt-2 text-sm sm:text-base md:text-lg">
+        La forma normal para esta nueva situación dinámica es
+      </p>
+      <GameTable
+        player1Strategies={["$S1$", "$S2$"]}
+        player2Strategies={["$t_1 t_1$", "$t_1 t_2$", "$t_2 t_1$", "$t_2 t_2$"]}
+        payoffs={[
+          ["($0;2$)", "($0;2$)", "($3;0$)", "($3;0$)"],
+          ["($2;1$)", "($1;3$)", "($2;1$)", "($1;3$)"],
+        ]}
+      />
     </ExerciseLayout>
   );
 }
 
-export default Ejercicio1;
+export default Ejercicio2;
