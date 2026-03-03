@@ -4,8 +4,11 @@ import { Link, Outlet } from "react-router-dom";
 import { MathJax } from "better-react-mathjax";
 // importamos componente de tabla de juegos
 import GameTable from "../../components/ui/GameTable";
+import ContactSection from "../../components/ui/ContactSection";
 
 const Unidad2 = () => {
+  const ejercicios = Array.from({ length: 28 }, (_, i) => i + 1);
+
   return (
     <MathJax>
       <section className="bg-[#fafafa] max-w-270 mx-auto p-3 sm:p-4 md:p-6">
@@ -602,105 +605,20 @@ const Unidad2 = () => {
         </h3>
         <hr />
         <ul className="flex gap-2 flex-wrap">
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-1`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 1
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-2`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 2
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-3`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 3
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-4`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 4
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-5`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 5
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-6`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 6
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-7`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 7
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-8`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 8
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-9`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 9
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-10`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 10
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-11`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 11
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-12`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 12
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-13`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 13
-          </Link>
-          <Link
-            to={`/juegos-estaticos-informacion-completa/ejercicio-14`}
-            className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
-          >
-            Ejercicio 14
-          </Link>
+          {ejercicios.map((numero) => (
+            <Link
+              key={numero}
+              to={`/juegos-estaticos-informacion-completa/ejercicio-${numero}`}
+              className="bg-[#1d2554] text-white px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-sm sm:text-base rounded mt-4 hover:bg-[#374785] transition-colors"
+            >
+              {`Ejercicio ${numero}`}
+            </Link>
+          ))}
         </ul>
+
         <Outlet />
-        <hr className="mt-6" />
-        <h3 className="text-xl sm:text-2xl font-semibold text-[#1d2554] mt-4">
-          Contacto
-        </h3>
-        <p className="mt-2 mb-6 text-sm sm:text-base">
-          Para alguna modificación o sugerencia, por favor mandar mail a{" "}
-          <a
-            href="mailto:armando.charal1998@gmail.com"
-            className=" text-[#1d2554] hover:text-[#374785] underline hover:no-underline"
-          >
-            armando.charal1998@gmail.com
-          </a>
-        </p>
+
+        <ContactSection />
       </section>
     </MathJax>
   );
