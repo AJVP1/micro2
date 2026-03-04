@@ -16,6 +16,20 @@ const ejerciciosMap = {
   "ejercicio-12": lazy(() => import("../pages/Unidad2/E12")),
   "ejercicio-13": lazy(() => import("../pages/Unidad2/E13")),
   "ejercicio-14": lazy(() => import("../pages/Unidad2/E14")),
+  "ejercicio-15": lazy(() => import("../pages/Unidad2/E15")),
+  "ejercicio-16": lazy(() => import("../pages/Unidad2/E16")),
+  "ejercicio-17": lazy(() => import("../pages/Unidad2/E17")),
+  "ejercicio-18": lazy(() => import("../pages/Unidad2/E18")),
+  "ejercicio-19": lazy(() => import("../pages/Unidad2/E19")),
+  "ejercicio-20": lazy(() => import("../pages/Unidad2/E20")),
+  "ejercicio-21": lazy(() => import("../pages/Unidad2/E21")),
+  "ejercicio-22": lazy(() => import("../pages/Unidad2/E22")),
+  "ejercicio-23": lazy(() => import("../pages/Unidad2/E23")),
+  "ejercicio-24": lazy(() => import("../pages/Unidad2/E24")),
+  "ejercicio-25": lazy(() => import("../pages/Unidad2/E25")),
+  "ejercicio-26": lazy(() => import("../pages/Unidad2/E26")),
+  "ejercicio-27": lazy(() => import("../pages/Unidad2/E27")),
+  "ejercicio-28": lazy(() => import("../pages/Unidad2/E28")),
 };
 
 function Router2() {
