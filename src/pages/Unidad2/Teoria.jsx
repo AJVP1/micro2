@@ -58,7 +58,7 @@ const Unidad2 = () => {
           ]}
         />
 
-        <p className="mt-4 text-sm sm:text-base">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
             "Se tienen dos jugadores, es decir, $I = \\{1, 2\\}$. Cada jugador tiene dos estrategias: $S_1 = \\{Callar, Confesar\\}$ y $S_2 = \\{Callar, Confesar\\}$. Cada jugador recibe un pago dependiendo de las estrategias elegidas por ambos jugadores, como se muestra en la tabla anterior."
           }
@@ -72,7 +72,7 @@ const Unidad2 = () => {
             "Una estrategia $s_i \\in S_i$ se dice que es estrictamente dominada si existe otra estrategia $s_i' \\in S_i$ tal que para cualquier combinación de estrategias de los demás jugadores $s_{-i} \\in S_{-i}$ se cumple que:"
           }
         </p>
-        <p className="mt-2 text-center text-sm sm:text-base">
+        <p className="mt-2 text-center text-sm sm:text-base md:text-lg">
           {
             "$$u_i(s_i', s_{-i}) > u_i(s_i, s_{-i}) \\quad \\forall s_{-i} \\in S_{-i}$$"
           }
@@ -177,7 +177,7 @@ const Unidad2 = () => {
         <h4 className="mt-4 text-sm sm:text-base md:text-lg">
           <strong>Aplicación de la herramienta al caso anterior</strong>
         </h4>
-        <p className="text-sm sm:text-base">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Sabemos que el jugador 2 es racional, por lo tanto, nunca va a elegir
           la estrategia callar, así que pasamos a sacar esa columna, quedando el
           juego reducido:
@@ -202,7 +202,7 @@ const Unidad2 = () => {
           payoffs={[["($-2, -2 $)"]]}
         />
 
-        <p className="text-sm sm:text-base">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Llegamos al resultado donde ambos jugadores confesarán.
         </p>
 
@@ -265,7 +265,7 @@ const Unidad2 = () => {
           ]}
         />
 
-        <p className="text-sm sm:text-base">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Ahora vemos que decide que el segundo jugador dada la elección del
           primero.
         </p>
@@ -333,7 +333,7 @@ const Unidad2 = () => {
             ["$(-1; \\textcolor{red}{1})$", "($\\textcolor{red}{1}; -1$)"],
           ]}
         />
-        <p className="text-sm sm:text-base">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Por lo tanto, tenemos un juego que no tiene equilibrios de Nash en
           estrategias puras y tampoco se puede resolver con Estrategias
           Estrictamente Dominantes.
@@ -365,7 +365,7 @@ const Unidad2 = () => {
           jugador puede mejorar su pago esperado cambiando unilateralmente su
           estrategia mixta, dado las estrategias mixtas de los demás jugadores.
         </p>
-        <p className="mt-2 text-center text-sm sm:text-base">
+        <p className="mt-2 text-center text-sm sm:text-base md:text-lg">
           {
             "$$E[u_i(\\sigma_i^*, \\sigma_{-i}^*)] \\geq E[u_i(\\sigma_i, \\sigma_{-i}^*)] \\quad \\forall \\sigma_i$$"
           }
@@ -393,7 +393,7 @@ const Unidad2 = () => {
           ]}
         />
 
-        <p className="text-sm sm:text-base">
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Para encontrar el equilibrio de Nash en estrategias mixtas, debemos
           determinar las probabilidades con las que cada jugador elige sus
           estrategias puras de manera que ninguno tenga incentivos para
@@ -473,7 +473,7 @@ const Unidad2 = () => {
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
-            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que ambos jugadores elijan A y B con una probabilidad del 50%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $(p^*, q^*) = \\left(\\frac{1}{2}, \\frac{1}{2}\\right)$."
+            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que ambos jugadores elijan A y B con una probabilidad del 50%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $\\{ (p, 1-p), (q, 1-q) \\} = \\{ \\left(\\frac{1}{2}, \\frac{1}{2}\\right), \\left(\\frac{1}{2}, \\frac{1}{2}\\right) \\}$."
           }
         </p>
 
@@ -569,7 +569,7 @@ const Unidad2 = () => {
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
-            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que el jugador 1 elija $T$ con una probabilidad del 75% y $C$ con una probabilidad del 25%, mientras que el jugador 2 elija $T$ con una probabilidad del 25% y $C$ con una probabilidad del 75%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $(p^*, q^*) = \\left(\\frac{3}{4}, \\frac{1}{4}\\right)$."
+            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que el jugador 1 elija $T$ con una probabilidad del 75% y $C$ con una probabilidad del 25%, mientras que el jugador 2 elija $T$ con una probabilidad del 25% y $C$ con una probabilidad del 75%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $\\{ (p, 1-p), (q, 1-q) \\} = \\{ \\left(\\frac{3}{4}, \\frac{1}{4}\\right), \\left(\\frac{1}{4}, \\frac{3}{4}\\right) \\} $."
           }
         </p>
 

@@ -1,5 +1,6 @@
 // importamos Link para navegacion interna
 import { Link, Outlet } from "react-router-dom";
+import ContactSection from "../../components/ui/ContactSection";
 // importamos MathJax para formulas matematicas
 import { MathJax } from "better-react-mathjax";
 
@@ -297,18 +298,8 @@ const Unidad3 = () => {
           </Link>
         </ul>
         <Outlet />
-        <hr className="mt-6" />
-        <h3 className="text-2xl font-semibold text-[#1d2554] mt-4">Contacto</h3>
-        <p className="mt-2 mb-6">
-          Para alguna modificación o sugerencia, por favor mandar mail a{" "}
-          <a
-            href="mailto:armando.charal1998@gmail.com"
-            className=" text-[#1d2554] hover:text-[#374785] underline hover:no-underline"
-          >
-            armando.charal1998@gmail.com
-          </a>
-          .
-        </p>
+
+        <ContactSection />
       </section>
     </MathJax>
   );

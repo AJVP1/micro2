@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import GameTable from "../../components/ui/GameTable";
 // importamos MathJax para formulas matematicas
 import { MathJax } from "better-react-mathjax";
+import ContactSection from "../../components/ui/ContactSection";
 
 const Unidad4 = () => {
   const ejercicios = Array.from({ length: 11 }, (_, i) => i + 1);
@@ -402,7 +403,7 @@ const Unidad4 = () => {
           estrategia tipo gatillo sería un equilibrio de Nash perfecto en
           subjuegos.
         </p>
-        <p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
           Nota: Para el caso donde ambos eligen $B$ al principio del juego, van
           a elegir siempre $B$ en los subsiguientes juegos. Este también es un
           equilibrio de Nash perfecto en subjuegos. Encontramos dos planes
