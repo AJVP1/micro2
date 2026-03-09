@@ -421,59 +421,54 @@ const Unidad2 = () => {
           {"$$E[u_1(B, q)] = (-1) \\cdot q + 1 \\cdot (1-q) = 1 - 2q$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          Entonces, la utilidad esperada del jugador 1 es:
+          Para que el jugador 1 no tenga incentivos para desviarse, la utilidad
+          esperada de elegir $A$ debe ser igual a la utilidad esperada de elegir
+          $B$:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_1(p, q)] = p \\cdot (2q - 1) + (1-p) \\cdot (1 - 2q)$$"}
+          {"$$E[u_1(A, q)] = E[u_1(B, q)]$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$= (4q - 2)p + (1 - 2q)$$"}
+          {"$$2q - 1 = 1 - 2q$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          De manera similar, podemos escribir la utilidad esperada del jugador 2
-          como:
+          {"$$q = \\frac{1}{2}$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_2(p, q)] = q \\cdot E(A, p) + (1-q) \\cdot E(B, p)$$"}
+          Analogamente para el jugador 2, escribimos la utilidad esperada del
+          jugador 2 de la siguiente manera:
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          {
+            "$$E[u_2(p, q)] = q \\cdot E[u_2(p, A)] + (1-q) \\cdot E[u_2(p, B)]$$ "
+          }
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           Calculando estas utilidades esperadas:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E(A, p) = p \\cdot (-1) + (1-p) \\cdot 1 = 1 - 2p$$"}
+          {"$$E[u_2(p, A)] = (-1)p + 1(1-p) = -2p + 1$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E(B, p) = p \\cdot 1 + (1-p) \\cdot (-1) = 2p - 1$$"}
+          {"$$E[u_2(p, B)] = 1p + (-1)(1-p) = 2p - 1$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          Entonces, la utilidad esperada del jugador 2 es:
+          Para que el jugador 2 no tenga incentivos para desviarse, la utilidad
+          esperada de elegir $A$ debe ser igual a la utilidad esperada de elegir
+          $B$:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_2(p, q)] = q \\cdot (1 - 2p) + (1-q) \\cdot (2p - 1)$$"}
+          {"$$E[u_2(p, A)] = E[u_2(p, B)]$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$= (4p - 2)q + (1 - 2p)$$"}
+          {"$$-2p + 1 = 2p - 1$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          Para encontrar el equilibrio de Nash, debemos encontrar las
-          probabilidades $p$ y $q$ que maximizan las utilidades esperadas de
-          ambos jugadores. Esto ocurre cuando las derivadas parciales de las
-          utilidades esperadas con respecto a $p$ y $q$ son iguales a cero:
-        </p>
-
-        <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "$$\\frac{\\partial E[u_1(p, q)]}{\\partial p} = 4q - 2 = 0 \\quad \\Rightarrow \\quad q = \\frac{1}{2}$$"
-          }
+          {"$$p = \\frac{1}{2}$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
-            "$$\\frac{\\partial E[u_2(p, q)]}{\\partial q} = 4p - 2 = 0 \\quad \\Rightarrow \\quad p = \\frac{1}{2}$$"
-          }
-        </p>
-        <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que ambos jugadores elijan A y B con una probabilidad del 50%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $\\{ (p, 1-p), (q, 1-q) \\} = \\{ \\left(\\frac{1}{2}, \\frac{1}{2}\\right), \\left(\\frac{1}{2}, \\frac{1}{2}\\right) \\}$."
+            "Por lo tanto, el equilibrio de Nash en estrategias mixtas es que ambos jugadores elijan $A$ y $B$ con una probabilidad del 50%. Es decir, el perfil de estrategias mixtas de equilibrio de Nash es $\\{ (p, 1-p), (q, 1-q) \\} = \\{ \\left(\\frac{1}{2}, \\frac{1}{2}\\right), \\left(\\frac{1}{2}, \\frac{1}{2}\\right) \\}$."
           }
         </p>
 
@@ -510,62 +505,56 @@ const Unidad2 = () => {
           Calculando estas utilidades esperadas:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_1(T, q)] = q \\cdot 3 + (1-q) \\cdot 0 = 3q$$"}
+          {"$$E[u_1(T, q)] = 3q + 0(1-q) = 3q$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_1(C, q)] = q \\cdot 0 + (1-q) \\cdot 1 = 1 - q$$"}
+          {"$$E[u_1(C, q)] = 0q + 1(1-q) = 1 - q$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          Entonces, la utilidad esperada del jugador 1 es:
+          Para que el jugador 1 no tenga incentivos para desviarse, la utilidad
+          esperada de elegir $T$ debe ser igual a la utilidad esperada de elegir
+          $C$:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_1(p, q)] = p \\cdot 3q + (1-p) \\cdot (1 - q)$$"}
+          {"$$E[u_1(T, q)] = E[u_1(C, q)]$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$= (4q - 1)p + (1 - q)$$"}
+          {"$$3q = 1 - q$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          De manera similar, la utilidad esperada del jugador 2 es:
+          {"$$q = \\frac{1}{4}$$"}
+        </p>
+        <p className="mt-2 text-sm sm:text-base md:text-lg">
+          Analogamente para el jugador 2, escribimos la utilidad esperada del
+          jugador 2 de la siguiente manera:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
-            "$$E[u_2(p, q)] = q \\cdot E[u_2(T, p)] + (1-q) \\cdot E[u_2(C, p)]$$"
+            "$$E[u_2(p, q)] = q \\cdot E[u_2(p, T)] + (1-q) \\cdot E[u_2(p, C)]$$ "
           }
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           Calculando estas utilidades esperadas:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_2(T, p)] = p \\cdot 1 + (1-p) \\cdot 0 = p$$"}
+          {"$$E[u_2(p, T)] = 1p + 0(1-p) = p$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_2(C, p)] = p \\cdot 0 + (1-p) \\cdot 3 = 3(1 - p)$$"}
+          {"$$E[u_2(p, C)] = 0p + 3(1-p) = 3 - 3p$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          Entonces, la utilidad esperada del jugador 2 es:
+          Para que el jugador 2 no tenga incentivos para desviarse, la utilidad
+          esperada de elegir $T$ debe ser igual a la utilidad esperada de elegir
+          $C$:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$E[u_2(p, q)] = q \\cdot p + (1-q) \\cdot 3(1 - p)$$"}
+          {"$$E[u_2(p, T)] = E[u_2(p, C)]$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$ = (4p - 3)q + 3(1 - p)$$"}
+          {"$$ p = 3 - 3p $$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          Para encontrar el equilibrio de Nash, debemos encontrar las
-          probabilidades $p$ y $q$ que maximizan las utilidades esperadas de
-          ambos jugadores. Esto ocurre cuando las derivadas parciales de las
-          utilidades esperadas con respecto a $p$ y $q$ son iguales a cero:
-        </p>
-
-        <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "$$\\frac{\\partial E[u_1(p, q)]}{\\partial p} = 4q - 1 = 0 \\quad \\Rightarrow \\quad q = \\frac{1}{4}$$"
-          }
-        </p>
-        <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {
-            "$$\\frac{\\partial E[u_2(p, q)]}{\\partial q} = 4p - 3 = 0 \\quad \\Rightarrow \\quad p = \\frac{3}{4}$$"
-          }
+          {"$$p = \\frac{3}{4}$$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
