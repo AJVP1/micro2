@@ -48,7 +48,9 @@ const Introduccion = () => {
       <ul className="list-decimal text-sm md:text-base lg:text-lg mt-3 md:mt-4 pl-6 md:pl-8">
         {modulos.map((modulo) => (
           <li key={modulo.id} className="mt-1">
-            <h3 className="text-sm md:text-base">{modulo.titulo}</h3>
+            <h3 className="mt-2 text-sm sm:text-base md:text-lg">
+              {modulo.titulo}
+            </h3>
           </li>
         ))}
       </ul>
