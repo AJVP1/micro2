@@ -161,7 +161,9 @@ const Unidad4 = () => {
         </p>
 
         <h4 className="mt-4 text-sm sm:text-base md:text-lg">
-          <strong>Definición de Subjuego</strong>
+          <strong>
+            Definición de Equilibrio de Nash perfecto en subjuegos
+          </strong>
         </h4>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           Es un perfil de estrategias que elimina una amenaza no creíble, es
