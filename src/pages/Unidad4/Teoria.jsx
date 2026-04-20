@@ -4,6 +4,7 @@ import GameTable from "../../components/ui/GameTable";
 import cienPiesImg from "../../assets/cien-pies.png";
 import alternados from "../../assets/alternados.png";
 import conjuntoInformativo from "../../assets/conjunto-informativo.png";
+import juegoRepetido from "../../assets/juego-repetido.png";
 // importamos MathJax para formulas matematicas
 import { MathJax } from "better-react-mathjax";
 import ContactSection from "../../components/ui/ContactSection";
@@ -93,7 +94,7 @@ const Unidad4 = () => {
         <img
           className="w-150 rounded mx-auto block mt-4"
           src={alternados}
-          alt="juego del cien pies"
+          alt="juego con ofertas alternadas"
         />
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           Resolviendo por inducción hacia atrás:
@@ -277,8 +278,8 @@ const Unidad4 = () => {
         </p>
         <img
           className="w-150 rounded mx-auto block mt-4"
-          src="/src/assets/juego-repetido.png"
-          alt="juego del cien pies"
+          src={juegoRepetido}
+          alt="juego de dilema del prisionero repetido"
         />
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           El jugador $2$ siempre escoge $B$ en cada uno de los subjuegos que
