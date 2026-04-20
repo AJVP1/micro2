@@ -1,5 +1,6 @@
 import ExerciseLayout from "../../components/layout/ExerciseLayout";
 import GameTable from "../../components/ui/GameTable";
+import ej2Img from "../../assets/ej2-multiples.png";
 
 function Ejercicio2() {
   return (
@@ -45,7 +46,7 @@ function Ejercicio2() {
       </p>
       <img
         className="w-150 rounded mx-auto block mt-4"
-        src="/src/assets/ej2-multiples.png"
+        src={ej2Img}
         alt="Árbol de decisiones para el juego del ladrón y el policía"
       />
       <p className="mt-2 text-sm sm:text-base md:text-lg">

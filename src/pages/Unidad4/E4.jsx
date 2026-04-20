@@ -1,5 +1,5 @@
 import ExerciseLayout from "../../components/layout/ExerciseLayout";
-import GameTable from "../../components/ui/GameTable";
+import ej4Img from "../../assets/ej4-multiples.png";
 
 function Ejercicio4() {
   return (
@@ -47,7 +47,7 @@ function Ejercicio4() {
       </p>
       <img
         className="w-150 rounded mx-auto block mt-4"
-        src="/src/assets/ej4-multiples.png"
+        src={ej4Img}
         alt="Árbol de decisiones para el juego los canibales"
       />
       <p className="mt-2 text-sm sm:text-base md:text-lg">

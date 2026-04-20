@@ -1,5 +1,4 @@
 import ExerciseLayout from "../../components/layout/ExerciseLayout";
-import GameTable from "../../components/ui/GameTable";
 
 function Ejercicio3() {
   return (

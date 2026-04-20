@@ -1,4 +1,6 @@
 import ExerciseLayout from "../../components/layout/ExerciseLayout";
+import ej1Img from "../../assets/ej1-multiples.png";
+import ej1Img2 from "../../assets/ej1-multiples-2.png";
 
 function Ejercicio1() {
   return (
@@ -39,7 +41,7 @@ function Ejercicio1() {
       </p>
       <img
         className="w-150 rounded mx-auto block mt-4"
-        src="/src/assets/ej1-multiples.png"
+        src={ej1Img}
         alt="Árbol de decisiones para el juego del ladrón y el policía"
       />
       <p className="mt-2 text-sm sm:text-base md:text-lg">Para el punto 2.</p>
@@ -74,7 +76,7 @@ function Ejercicio1() {
       </p>
       <img
         className="w-150 rounded mx-auto block mt-4"
-        src="/src/assets/ej1-multiples-2.png"
+        src={ej1Img2}
         alt="Árbol de decisiones para el juego del ladrón y el policía"
       />
       <p className="mt-2 text-sm sm:text-base md:text-lg">

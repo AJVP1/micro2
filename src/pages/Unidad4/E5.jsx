@@ -1,5 +1,6 @@
 import ExerciseLayout from "../../components/layout/ExerciseLayout";
-import GameTable from "../../components/ui/GameTable";
+import ej5Img from "../../assets/ej5-multiples.png";
+import ej5Img2 from "../../assets/ej5-multiples-2.png";
 
 function Ejercicio5() {
   return (
@@ -41,7 +42,7 @@ function Ejercicio5() {
       </p>
       <img
         className="w-150 rounded mx-auto block mt-4"
-        src="/src/assets/ej5-multiples.png"
+        src={ej5Img}
         alt="Árbol de decisiones para el juego de las naves"
       />
 
@@ -64,7 +65,7 @@ function Ejercicio5() {
       </p>
       <img
         className="w-150 rounded mx-auto block mt-4"
-        src="/src/assets/ej5-multiples-2.png"
+        src={ej5Img2}
         alt="Árbol de decisiones para el juego de las naves sin puente"
       />
       <p className="mt-2 text-sm sm:text-base md:text-lg">

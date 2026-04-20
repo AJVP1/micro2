@@ -1,6 +1,9 @@
 // importamos Link para navegacion interna
 import { Link, Outlet } from "react-router-dom";
 import GameTable from "../../components/ui/GameTable";
+import cienPiesImg from "../../assets/cien-pies.png";
+import alternados from "../../assets/alternados.png";
+import conjuntoInformativo from "../../assets/conjunto-informativo.png";
 // importamos MathJax para formulas matematicas
 import { MathJax } from "better-react-mathjax";
 import ContactSection from "../../components/ui/ContactSection";
@@ -39,7 +42,7 @@ const Unidad4 = () => {
         </h4>
         <img
           className="w-150 rounded mx-auto block mt-4"
-          src="/src/assets/cien-pies.png"
+          src={cienPiesImg}
           alt="juego del cien pies"
         />
         <p className="mt-2 text-sm sm:text-base md:text-lg">
@@ -89,7 +92,7 @@ const Unidad4 = () => {
         </h4>
         <img
           className="w-150 rounded mx-auto block mt-4"
-          src="/src/assets/alternados.png"
+          src={alternados}
           alt="juego del cien pies"
         />
         <p className="mt-2 text-sm sm:text-base md:text-lg">
@@ -183,7 +186,7 @@ const Unidad4 = () => {
         </p>
         <img
           className="w-150 rounded mx-auto block mt-4"
-          src="/src/assets/conjunto-informativo.png"
+          src={conjuntoInformativo}
           alt="juego del cien pies"
         />
         <p className="mt-2 text-sm sm:text-base md:text-lg">
