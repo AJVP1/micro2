@@ -24,7 +24,7 @@ function Ejercicio26() {
         player2Strategies={["I", "NI"]}
         payoffs={[
           ["($0;-h$)", "($w;-w$)"],
-          ["(w-g;v-w-h$)", "($w-g;v-w$)"],
+          ["($w-g;v-w-h$)", "($w-g;v-w$)"],
         ]}
       />
       <p className="mt-2 text-sm sm:text-base md:text-lg">
@@ -41,7 +41,7 @@ function Ejercicio26() {
         player2Strategies={["I", "NI"]}
         payoffs={[
           ["($0;-h$)", "($w;-w$)"],
-          ["(\\textcolor{red}{w-g};v-w-h$)", "($w-g;v-w$)"],
+          ["($\\textcolor{red}{w-g};v-w-h$)", "($w-g;v-w$)"],
         ]}
       />
       <p className="mt-2 text-sm sm:text-base md:text-lg">
