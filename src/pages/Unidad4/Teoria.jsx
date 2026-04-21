@@ -422,7 +422,7 @@ const Unidad4 = () => {
         </h4>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
-            "$$ 2+ 2\\delta +  2\\delta^2 = 2(1 + \\delta + \\delta^2) = 2(\\sum_{i=0}^{\\infty} \\delta^i) $$"
+            "$$ 2+ 2\\delta +  2\\delta^2 + ... = 2(1 + \\delta + \\delta^2 + ...) = 2(\\sum_{i=0}^{\\infty} \\delta^i) $$"
           }
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">Donde</p>
@@ -458,7 +458,7 @@ const Unidad4 = () => {
         <p className="mt-2 text-sm sm:text-base md:text-lg">Entonces</p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
-            "$$ 2+ 2\\delta +  2\\delta^2 = 2(1 + \\delta + \\delta^2) = \\frac{2}{1-\\delta} $$"
+            "$$ 2+ 2\\delta +  2\\delta^2 + ... = 2(1 + \\delta + \\delta^2 + ...) = \\frac{2}{1-\\delta} $$"
           }
         </p>
 
