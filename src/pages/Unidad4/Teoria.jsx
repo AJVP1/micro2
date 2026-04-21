@@ -377,14 +377,14 @@ const Unidad4 = () => {
           obtiene:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
-          {"$$2 + 2\\delta +  2\\delta^2 = ... =  \\frac{2}{1-\\delta} $$"}
+          {"$$2 + 2\\delta +  2\\delta^2 ... =  \\frac{2}{1-\\delta} $$"}
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           Si alguno se desvía en el primer momento, el que se desvió obtiene:
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
           {
-            "$$3 + \\delta +  \\delta^2 = ... =  3 + \\frac{\\delta}{1-\\delta} $$"
+            "$$3 + \\delta +  \\delta^2 ... =  3 + \\frac{\\delta}{1-\\delta} $$"
           }
         </p>
         <p className="mt-2 text-sm sm:text-base md:text-lg">
